@@ -13,7 +13,7 @@ const config = {
     favicon: 'img/favicon.ico',
 
     // Set the production url of your site here
-    url: 'https://your-docusaurus-site.example.com',
+    url: 'https://docs.vidprotect.ir',
     baseUrl: '/',
 
     organizationName: 'VidProtect',
@@ -43,9 +43,6 @@ const config = {
             ({
                 docs: {
                     sidebarPath: './sidebars.js'
-                },
-                blog: {
-                    showReadingTime: true
                 },
                 theme: {
                     customCss: './src/css/custom.css',
@@ -79,7 +76,7 @@ const config = {
                 ],
             },
             footer: {
-                style: 'dark',
+                style: 'light',
                 links: [
                     {
                         title: 'مستندات',
