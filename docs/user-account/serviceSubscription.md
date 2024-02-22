@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+id: subscription
 ---
 
 # حق اشتراک
