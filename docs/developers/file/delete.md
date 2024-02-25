@@ -1,22 +1,20 @@
 ---
-id: update
-title: ویرایش باکت
+id: delete
+title: حذف فایل
 tags:
-  - Update
+  - Delete
 ---
+
+**نکته مهم:** در صورت حذف فایل امکان برگشت آن وجود ندارد.
 
 ## مولغه ها
 
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
-* آیدی باکت
-* عنوان
-* توضیحات (اختیاری)
+* آیدی فایل
 
-| Key         | Type   | Required | In   | Example                      |
-|-------------|--------|----------|------|------------------------------|
-| bucketId    | string | true     | body | -                            |
-| title       | string | true     | body | Example 2                    |
-| description | string | false    | body | This is a sample description | 
+| Key    | Type   | Required | In   | Example |
+|--------|--------|----------|------|---------|
+| fileId | string | true     | body | -       |
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -35,12 +33,11 @@ values={[
 ```js
 const superagent = require('superagent');
 
-superagent('PATCH', 'https://api.vidprotect.ir/v1/storage/bucket')
+superagent('DELETE', 'https://api.vidprotect.ir/v1/storage/bucket/file')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({
-        title: "Example 2",
-        bucketId: "_id"
+        fileId: "_id"
     })
     .then(data => data.body)
     .catch(console.log);
@@ -53,18 +50,17 @@ superagent('PATCH', 'https://api.vidprotect.ir/v1/storage/bucket')
 ```python
 import requests
 
-url = 'https://api.vidprotect.ir/v1/storage/bucket'
+url = 'https://api.vidprotect.ir/v1/storage/bucket/file'
 headers = {
     'api_key': 'your_api_key',
     'secret_key': 'your_secret_key'
 }
 payload = {
-    'title': 'Example 2',
-    'bucketId': '_id'
+    'fileId': '_id'
 }
 
 try:
-    response = requests.patch(url, headers=headers, json=payload)
+    response = requests.delete(url, headers=headers, json=payload)
     response.raise_for_status()
     data = response.json()
     print(data)
@@ -88,17 +84,16 @@ import (
 )
 
 func main() {
-	url := "https://api.vidprotect.ir/v1/storage/bucket"
+	url := "https://api.vidprotect.ir/v1/storage/bucket/file"
 	apiKey := "your_api_key"
 	secretKey := "your_secret_key"
 
 	data := map[string]string{
-		"title": "Example 2",
-		"bucketId": "_id",
+		"fileId": "_id",
 	}
 	jsonData, _ := json.Marshal(data)
 
-	req, err := http.NewRequest("PATCH", url, bytes.NewBuffer(jsonData))
+	req, err := http.NewRequest("DELETE", url, bytes.NewBuffer(jsonData))
 	if err != nil {
 		fmt.Println("Error creating request:", err)
 		return
@@ -126,14 +121,13 @@ func main() {
 ```php
 <?php
 
-$url = 'https://api.vidprotect.ir/v1/storage/bucket';
+$url = 'https://api.vidprotect.ir/v1/storage/bucket/file';
 $data = [
-    'title' => 'Example 2',
-    'bucketId' => '_id'
+    'fileId' => '_id'
 ];
 
 $ch = curl_init($url);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'api_key: your_api_key',
     'secret_key: your_secret_key'

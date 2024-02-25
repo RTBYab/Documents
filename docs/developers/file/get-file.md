@@ -1,6 +1,6 @@
 ---
-id: list-buckets
-title: دریافت لیست باکت ها
+id: get-file
+title: دریافت فایل
 tags:
   - Get
 ---
@@ -8,15 +8,12 @@ tags:
 ## مولغه ها
 
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
-* مرتب سازی (اختیاری)
-* سایز (اختیاری)
-* شماره پیج فعلی (اختیاری)
+* آیدی فایل
 
-| Key         | Type   | Required | In    | Example  |
-|-------------|--------|----------|-------|----------|
-| sortBy      | string | false    | query | _id:desc |
-| limit       | number | false    | query | 8        |
-| currentPage | number | false    | query | 1        |
+| Key     | Type                   | Required | In    | Example                                |
+|---------|------------------------|----------|-------|----------------------------------------|
+| fileId  | string                 | true     | query | -                                      |
+| basedOn | enum ['_id', 'fileId'] | false    | query | Search file based on _id or fileId key |
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -35,7 +32,7 @@ values={[
 ```js
 const superagent = require('superagent');
 
-superagent('https://api.vidprotect.ir/v1/storage/bucket/all')
+superagent('https://api.vidprotect.ir/v1/storage/bucket/file/info?fileId=_id')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .then(data => data.body)
@@ -49,7 +46,7 @@ superagent('https://api.vidprotect.ir/v1/storage/bucket/all')
 ```python
 import requests
 
-url = 'https://api.vidprotect.ir/v1/storage/bucket/all'
+url = 'https://api.vidprotect.ir/v1/storage/bucket/file/info?fileId=_id'
 headers = {
     'api_key': 'your_api_key',
     'secret_key': 'your_secret_key'
@@ -79,7 +76,7 @@ import (
 )
 
 func main() {
-	url := "https://api.vidprotect.ir/v1/storage/bucket/all"
+	url := "https://api.vidprotect.ir/v1/storage/bucket/file/info?fileId=_id"
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -115,7 +112,7 @@ func main() {
 ```php
 <?php
 
-$url = 'https://api.vidprotect.ir/v1/storage/bucket/all';
+$url = 'https://api.vidprotect.ir/v1/storage/bucket/file/info?fileId=_id';
 $api_key = 'your_api_key';
 $secret_key = 'your_secret_key';
 

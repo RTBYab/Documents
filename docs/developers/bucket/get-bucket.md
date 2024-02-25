@@ -117,10 +117,10 @@ $secret_key = 'your_secret_key';
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'api_key: ' . $api_key,
     'secret_key: ' . $secret_key
-));
+]);
 
 $response = curl_exec($ch);
 

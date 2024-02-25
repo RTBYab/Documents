@@ -1,6 +1,6 @@
 ---
-id: list-buckets
-title: دریافت لیست باکت ها
+id: on-bucket
+title: دریافت لیست فایل ها در یک باکت
 tags:
   - Get
 ---
@@ -8,15 +8,21 @@ tags:
 ## مولغه ها
 
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
+* آیدی باکت
 * مرتب سازی (اختیاری)
 * سایز (اختیاری)
 * شماره پیج فعلی (اختیاری)
+* وضعیت پردازش (اختیاری)
+* لیستی از آیدی فایل ها (اختیاری)
 
-| Key         | Type   | Required | In    | Example  |
-|-------------|--------|----------|-------|----------|
-| sortBy      | string | false    | query | _id:desc |
-| limit       | number | false    | query | 8        |
-| currentPage | number | false    | query | 1        |
+| Key         | Type                               | Required | In    | Example  |
+|-------------|------------------------------------|----------|-------|----------|
+| bucketId    | string                             | true     | query | -        |
+| sortBy      | string                             | false    | query | _id:desc |
+| limit       | number                             | false    | query | 8        |
+| currentPage | number                             | false    | query | 1        |
+| hlsStatus   | enum ['done', 'failed', 'waiting'] | false    | query | done     |
+| listOfId    | string                             | false    | query | _id,_id  |
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -35,7 +41,7 @@ values={[
 ```js
 const superagent = require('superagent');
 
-superagent('https://api.vidprotect.ir/v1/storage/bucket/all')
+superagent('https://api.vidprotect.ir/v1/storage/bucket/file/all')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .then(data => data.body)
@@ -49,7 +55,7 @@ superagent('https://api.vidprotect.ir/v1/storage/bucket/all')
 ```python
 import requests
 
-url = 'https://api.vidprotect.ir/v1/storage/bucket/all'
+url = 'https://api.vidprotect.ir/v1/storage/bucket/file/all'
 headers = {
     'api_key': 'your_api_key',
     'secret_key': 'your_secret_key'
@@ -79,7 +85,7 @@ import (
 )
 
 func main() {
-	url := "https://api.vidprotect.ir/v1/storage/bucket/all"
+	url := "https://api.vidprotect.ir/v1/storage/bucket/file/all"
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -115,7 +121,7 @@ func main() {
 ```php
 <?php
 
-$url = 'https://api.vidprotect.ir/v1/storage/bucket/all';
+$url = 'https://api.vidprotect.ir/v1/storage/bucket/file/all';
 $api_key = 'your_api_key';
 $secret_key = 'your_secret_key';
 
