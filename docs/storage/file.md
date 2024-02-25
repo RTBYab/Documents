@@ -1,6 +1,11 @@
 ---
 sidebar_position: 3
 id: file
+tags:
+  - File
+  - Upload
+  - Delete
+  - Update
 ---
 
 # فایل

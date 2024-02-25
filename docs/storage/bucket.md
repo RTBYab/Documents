@@ -1,6 +1,11 @@
 ---
 sidebar_position: 2
 id: bucket
+tags:
+  - Bucket
+  - Create
+  - Update
+  - Delete
 ---
 
 # باکت

@@ -1,6 +1,11 @@
 ---
 sidebar_position: 1
 id: definitions
+tags:
+  - Definitions
+  - Storage
+  - Bucket
+  - File
 ---
 
 # تعاریف

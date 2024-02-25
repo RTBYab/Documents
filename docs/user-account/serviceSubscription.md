@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 id: subscription
+tags:
+  - Service subscription
 ---
 
 # حق اشتراک
