@@ -1,0 +1,14 @@
+.git
+node_modules
+scripts
+build
+README.md
+.gitignore
+.vidignore
+.liaraignore
+publish
+.idea
+.github
+package-lock.json
+production
+.docusaurus

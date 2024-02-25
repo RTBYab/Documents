@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+
+  docs:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: docs
+    restart: always
+    ports:
+      - '2087:2087'

@@ -1,0 +1,13 @@
+docker
+package-lock.json
+node_modules
+build
+README.md
+publish
+.git
+.idea
+.vidignore
+.github
+out
+production
+.docusaurus
