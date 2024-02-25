@@ -20,7 +20,7 @@ WORKDIR /opt/docusaurus
 
 COPY . /opt/docusaurus/
 
-RUN npm ci
+RUN npm i
 
 RUN npm run build
 
