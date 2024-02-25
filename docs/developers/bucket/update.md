@@ -12,6 +12,12 @@ tags:
 * عنوان
 * توضیحات (اختیاری)
 
+| Key         | Type   | Required | In   | Example                      |
+|-------------|--------|----------|------|------------------------------|
+| bucketId    | string | true     | body | -                            |
+| title       | string | true     | body | Example 2                    |
+| description | string | false    | body | This is a sample description | 
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -29,7 +35,7 @@ values={[
 ```js
 const superagent = require('superagent');
 
-superagent('PATCH', `https://api.vidprotect.ir/v1/storage/bucket`)
+superagent('PATCH', 'https://api.vidprotect.ir/v1/storage/bucket')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({

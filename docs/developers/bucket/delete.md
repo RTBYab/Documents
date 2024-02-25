@@ -12,6 +12,9 @@ tags:
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
 * آیدی باکت
 
+| Key      | Type   | Required | In   | Example |
+|----------|--------|----------|------|---------|
+| bucketId | string | true     | body | -       |
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -30,7 +33,7 @@ values={[
 ```js
 const superagent = require('superagent');
 
-superagent('DELETE', `https://api.vidprotect.ir/v1/storage/bucket`)
+superagent('DELETE', 'https://api.vidprotect.ir/v1/storage/bucket')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({

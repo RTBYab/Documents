@@ -13,6 +13,10 @@ tags:
 * نام باکت
 * توضیحات (اختیاری)
 
+| Key         | Type   | Required | In   | Example                      |
+|-------------|--------|----------|------|------------------------------|
+| title       | string | true     | body | Example 1                    |
+| description | string | false    | body | This is a sample description | 
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -31,7 +35,7 @@ values={[
 ```js
 const superagent = require('superagent');
 
-superagent('POST', `https://api.vidprotect.ir/v1/storage/bucket`)
+superagent('POST', 'https://api.vidprotect.ir/v1/storage/bucket')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({
