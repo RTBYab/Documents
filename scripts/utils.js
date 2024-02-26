@@ -71,4 +71,19 @@ utils.copyRecursiveSync = function (src, dest) {
                 : dest
         );
     }
+
+    if (dest.includes('Dockerfile') && utils.getEnvType() === 'dev')
+        utils.changeDockerfile(dest.replace(dockerPath, ''));
+}
+
+
+/**
+ * @param {String} fullPath
+ * @return {void}
+ */
+utils.changeDockerfile = function (fullPath) {
+    let data = fs.readFileSync(fullPath).toString();
+    data = data.replace('WORKDIR /app', 'WORKDIR /');
+    data = data.replace(/EXPOSE(\s+\d+)+/, 'EXPOSE 3000');
+    fs.writeFileSync(fullPath, data);
 }

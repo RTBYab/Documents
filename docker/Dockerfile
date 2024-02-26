@@ -10,6 +10,6 @@ ADD /app ./
 
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE 2087
 
 CMD npm run serve
