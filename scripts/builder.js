@@ -8,18 +8,9 @@ const productionPath = `${rootPath}production/`;
 const productionAppPath = `${productionPath}app`;
 const inDevelopment = utils.getEnvType() === 'dev';
 
-if (utils.getEnvType() === 'dev')
-    setupDev();
-else
-    setupProduction();
+makeSrc();
 
-function setupDev() {
-    setupProduction();
-    fs.copyFileSync(`${productionAppPath}/docker/Dockerfile`, `${productionAppPath}/Dockerfile`);
-    fs.rmSync(`${productionAppPath}/docker`, {recursive: true, force: true});
-}
-
-function setupProduction() {
+function makeSrc() {
     if (fs.existsSync(productionPath))
         utils.deleteFolderRecursive(productionPath);
 

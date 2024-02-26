@@ -51,7 +51,7 @@ utils.copyRecursiveSync = function (src, dest) {
 
     if (isDirectory) {
         fs.mkdirSync(
-            isDockerFolder && utils.getEnvType() !== 'dev'
+            isDockerFolder
                 ? dest.replace(dockerPath, '')
                 : dest,
             {recursive: true}
@@ -66,7 +66,7 @@ utils.copyRecursiveSync = function (src, dest) {
     } else {
         fs.copyFileSync(
             src,
-            (isDockerFolder || isDockerFile) && utils.getEnvType() !== 'dev'
+            isDockerFolder || isDockerFile || (utils.getEnvType() === 'dev' && dest.includes('liara.json'))
                 ? dest.replace(dockerPath, '')
                 : dest
         );
