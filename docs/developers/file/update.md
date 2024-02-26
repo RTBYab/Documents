@@ -5,7 +5,7 @@ tags:
   - Update
 ---
 
-## مولغه ها
+## مولفه ها
 
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
 * آیدی فایل

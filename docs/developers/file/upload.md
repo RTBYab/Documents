@@ -15,7 +15,7 @@ tags:
 [گیت هاب](https://github.com/tus)
 این پروتکل رجوع کنید.
 
-## مولغه ها
+## مولفه ها
 
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
 * آیدی باکت (اختیاری)

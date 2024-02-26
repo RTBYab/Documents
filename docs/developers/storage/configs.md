@@ -10,7 +10,7 @@ tags:
 
 ## بروزرسانی
 
-## مولغه ها
+## مولفه ها
 
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
 
@@ -181,7 +181,7 @@ echo $response;
 
 ### دریافت
 
-## مولغه ها
+## مولفه ها
 
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
 

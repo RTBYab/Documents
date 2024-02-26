@@ -7,7 +7,7 @@ tags:
 
 **نکته مهم:** در صورت حذف فایل امکان برگشت آن وجود ندارد.
 
-## مولغه ها
+## مولفه ها
 
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
 * آیدی فایل
