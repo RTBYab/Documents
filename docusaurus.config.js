@@ -76,10 +76,6 @@ const config = {
                         title: 'مستندات',
                         items: [
                             {
-                                label: 'آموزش',
-                                to: '/docs',
-                            },
-                            {
                                 label: 'API',
                                 to: '/docs/category/توسعه-دهندگان',
                             },
