@@ -76,8 +76,20 @@ const config = {
                         title: 'مستندات',
                         items: [
                             {
-                                label: 'API',
+                                label: 'معرفی',
+                                to: '/docs/category/معرفی',
+                            },
+                            {
+                                label: 'پلاگین وردپرس',
+                                to: '/docs/category/پلاگین-وردپرس',
+                            },
+                            {
+                                label: 'توسعه دهندگان',
                                 to: '/docs/category/توسعه-دهندگان',
+                            },
+                            {
+                                label: 'Swagger API',
+                                to: 'https://api.vidprotect.ir/docs',
                             },
                         ],
                     },

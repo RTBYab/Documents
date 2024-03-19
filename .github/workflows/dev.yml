@@ -1,0 +1,26 @@
+name: CI-CD-Dev
+
+on:
+  pull_request:
+    branches: [ dev ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Setup project
+        run: npm run setup:project -- --type=dev
+
+      - name: Setup liara
+        env:
+          LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
+        run: |
+          npm i -g @liara/cli@4
+          cd ./production
+          liara deploy --api-token="$LIARA_TOKEN" --region iran --detach --app vid-public-docs-dodojsahhapwfbbe3yfbwyub --port 3000

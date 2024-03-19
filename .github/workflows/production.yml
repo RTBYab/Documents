@@ -1,0 +1,27 @@
+name: CI-CD-Production
+
+on:
+  pull_request:
+    branches: [ master ]
+    types: [ closed ]
+
+jobs:
+  build:
+    if: ${{ github.event.pull_request.merged }}
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Setup project
+        run: npm run setup:project -- --type=production
+
+      - name: Deploy project
+        run: |
+          cd ./production && sudo docker compose up -d --build docs
