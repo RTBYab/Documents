@@ -3,6 +3,7 @@ id: retry-build
 title: تلاش دوباره برای تبدیل فایل
 tags:
   - Retry build file
+  - File
 ---
 
 ## مولفه ها

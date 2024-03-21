@@ -3,6 +3,7 @@ id: get-file
 title: دریافت فایل
 tags:
   - Get
+  - File
 ---
 
 ## مولفه ها

@@ -57,17 +57,10 @@ const config = {
             navbar: {
                 title: 'ویدپروتکت',
                 logo: {
+                    href: '/docs/category/معرفی',
                     alt: 'Logo',
-                    src: 'img/logo.svg',
-                },
-                items: [
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'docs',
-                        position: 'left',
-                        label: 'آموزش',
-                    }
-                ],
+                    src: 'img/logo.svg'
+                }
             },
             footer: {
                 style: 'light',
@@ -76,8 +69,20 @@ const config = {
                         title: 'مستندات',
                         items: [
                             {
-                                label: 'API',
+                                label: 'معرفی',
+                                to: '/docs/category/معرفی',
+                            },
+                            {
+                                label: 'پلاگین وردپرس',
+                                to: '/docs/category/پلاگین-وردپرس',
+                            },
+                            {
+                                label: 'توسعه دهندگان',
                                 to: '/docs/category/توسعه-دهندگان',
+                            },
+                            {
+                                label: 'Swagger API',
+                                to: 'https://api.vidprotect.ir/docs',
                             },
                         ],
                     },
