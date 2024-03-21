@@ -85,5 +85,6 @@ utils.changeDockerfile = function (fullPath) {
     let data = fs.readFileSync(fullPath).toString();
     data = data.replace('WORKDIR /app', 'WORKDIR /');
     data = data.replace(/EXPOSE(\s+\d+)+/, 'EXPOSE 3000');
+    data = data.replace(/CMD npm run serve -- --port(\s+\d+)+/, 'CMD npm run serve -- --port 3000');
     fs.writeFileSync(fullPath, data);
 }
