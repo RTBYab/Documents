@@ -16,5 +16,5 @@ tags:
 <br/>
 <br/>
 <center>
-![Image](../../static/img/privacy-large.svg)
+![Image](../../static/img/privacy.svg)
 </center>
