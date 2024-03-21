@@ -1,6 +1,6 @@
 ---
 id: get-bucket
-title: دریافت باکت
+title: دریافت اطلاعات پوشه
 tags:
   - Get
 ---
@@ -8,7 +8,7 @@ tags:
 ## مولفه ها
 
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
-* آیدی باکت
+* آیدی پوشه
 
 | Key      | Type   | Required | In    | Example |
 |----------|--------|----------|-------|---------|

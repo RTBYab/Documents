@@ -1,6 +1,6 @@
 ---
 id: update
-title: ویرایش باکت
+title: ویرایش پوشه
 tags:
   - Update
 ---
@@ -8,7 +8,7 @@ tags:
 ## مولفه ها
 
 * [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
-* آیدی باکت
+* آیدی پوشه
 * عنوان
 * توضیحات (اختیاری)
 

@@ -1,37 +1,12 @@
-import clsx from 'clsx';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import React, { useEffect } from 'react';
+import { Redirect } from '@docusaurus/router';
 
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
+function Home() {
+    useEffect(() => {
+        window.location.href = '/docs/category/معرفی';
+    }, []);
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-        </div>
-      </div>
-    </header>
-  );
+    return <Redirect to="/docs/category/معرفی" />;
 }
 
-export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={siteConfig.title}
-      description="ویدپروتکت | VidProtect">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
-  );
-}
+export default Home;

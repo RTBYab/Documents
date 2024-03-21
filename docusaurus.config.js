@@ -57,17 +57,10 @@ const config = {
             navbar: {
                 title: 'ویدپروتکت',
                 logo: {
+                    href: '/docs/category/معرفی',
                     alt: 'Logo',
-                    src: 'img/logo.svg',
-                },
-                items: [
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'docs',
-                        position: 'left',
-                        label: 'آموزش',
-                    }
-                ],
+                    src: 'img/logo.svg'
+                }
             },
             footer: {
                 style: 'light',

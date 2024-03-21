@@ -1,8 +1,9 @@
 ---
 id: update
-title: ویرایش فایل
+title: ویرایش ویدیو یا پادکست
 tags:
   - Update
+  - File
 ---
 
 ## مولفه ها

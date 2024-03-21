@@ -1,6 +1,6 @@
 ---
 id: list-buckets
-title: دریافت لیست باکت ها
+title: دریافت لیست پوشه ها
 tags:
   - Get
 ---
