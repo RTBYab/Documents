@@ -1,6 +1,6 @@
 ---
 id: get-file
-title: دریافت فایل
+title: دریافت اطلاعات ویویو یا پادکست
 tags:
   - Get
   - File
