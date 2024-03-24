@@ -54,6 +54,37 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            metadata: [
+                {
+                    name: 'keywords',
+                    content: [
+                        'مستندات ویدپروتکت',
+                        'مستندات وید پروتکت',
+                        'مستندات VidProtect',
+                        'VidProtect docs',
+                        'Vid Protect docs',
+                        'ویدپروتکت',
+                        'wordpress vidprotect',
+                        'vidprotect wordpress docs',
+                        'vidprotect wordpress',
+                        'ویدپروتکت وردپرس',
+                        'وید پروتکت وردپرس',
+                        'محافظت از دوره های آموزشی',
+                        'جلوگیری از دانلود ویدیوها',
+                        'ضد سرقت شدن ویدیوها',
+                        'جلوگیری از هک دوره‌های آموزشی',
+                        'ضد سرقت شدن دوره‌های آموزشی',
+                        'ضد هک شدن ویدیوها',
+                        'وید پروتکت',
+                        'وید پروتکت توسعه دهندگان',
+                        'ویدپروتکت توسعه دهندگان',
+                        'Vid Protect',
+                        'VidProtect',
+                        'VideoProtect'
+                    ].join(', ')
+                },
+                {name: 'descriptions', content: 'سامانه محافظت از دوره های آموزشی'},
+            ],
             navbar: {
                 title: 'ویدپروتکت',
                 logo: {
@@ -110,6 +141,30 @@ const config = {
                 theme: prismThemes.github,
                 darkTheme: prismThemes.dracula,
             },
+            headTags: [
+                // Declare a <link> preconnect tag
+                {
+                    tagName: 'link',
+                    attributes: {
+                        rel: 'preconnect',
+                        href: 'https://docs.vidprotect.ir',
+                    },
+                },
+                // Declare some json-ld structured data
+                {
+                    tagName: 'script',
+                    attributes: {
+                        type: 'application/ld+json',
+                    },
+                    innerHTML: JSON.stringify({
+                        '@context': 'https://docs.vidprotect.ir/docs/category/معرفی',
+                        '@type': 'Organization',
+                        name: 'مستندات ویدپروتکت',
+                        url: 'https://docs.vidprotect.ir',
+                        logo: 'https://docs.vidprotect.ir/img/favicon.ico',
+                    }),
+                },
+            ],
         }),
 };
 
