@@ -60,11 +60,15 @@ values={[
 <TabItem value="curl">
 
 ```shell
-curl -X POST https://api.vidprotect.ir/v1/storage/protect/config \
-   -H 'api_key: your_api_key' \
-   -H 'secret_key: your_secret_key' \   
-   -H 'Content-Type: application/json' \
-   -d '{ "fontColor": "#ffff00" }'
+curl -X 'POST' \
+  'https://api.vidprotect.ir/v1/storage/protect/config' \
+  -H 'accept: application/json' \
+  -H 'api_key: your_api_key' \
+  -H 'secret_key: your_secret_key' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "fontColor": "#ffff00"
+}'
 ```
 
 </TabItem>
@@ -211,10 +215,11 @@ values={[
 <TabItem value="curl">
 
 ```shell
-curl https://api.vidprotect.ir/v1/storage/protect/config \
-   -H 'api_key: your_api_key' \
-   -H 'secret_key: your_secret_key' \   
-   -H 'Content-Type: application/json'
+curl -X 'GET' \
+  'https://api.vidprotect.ir/v1/storage/protect/config' \
+  -H 'accept: application/json' \
+  -H 'api_key: your_api_key' \
+  -H 'secret_key: your_secret_key'
 ```
 
 </TabItem>

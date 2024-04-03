@@ -34,11 +34,15 @@ values={[
 <TabItem value="curl">
 
 ```shell
-curl -X DELETE https://api.vidprotect.ir/v1/storage/bucket/file \
-   -H 'api_key: your_api_key' \
-   -H 'secret_key: your_secret_key' \   
-   -H 'Content-Type: application/json' \
-   -d '{ "fileId": "_id" }'
+curl -X 'DELETE' \
+  'https://api.vidprotect.ir/v1/storage/bucket/file' \
+  -H 'accept: application/json' \
+  -H 'api_key: your_api_key' \
+  -H 'secret_key: your_secret_key' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "fileId": "_id"
+}'
 ```
 
 </TabItem>

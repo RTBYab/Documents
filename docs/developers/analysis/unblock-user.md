@@ -34,11 +34,15 @@ values={[
 <TabItem value="curl">
 
 ```shell
-curl -X POST https://api.vidprotect.ir/v1/analysis/user/video/anomaly \
-   -H 'api_key: your_api_key' \
-   -H 'secret_key: your_secret_key' \   
-   -H 'Content-Type: application/json' \
-   -d '{ "mobileNumber": "09000000000" }'
+curl -X 'POST' \
+  'https://api.vidprotect.ir/v1/analysis/user/video/anomaly' \
+  -H 'accept: application/json' \
+  -H 'api_key: your_api_key' \
+  -H 'secret_key: your_secret_key' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "mobileNumber": "09000000000"
+}'
 ```
 
 </TabItem>

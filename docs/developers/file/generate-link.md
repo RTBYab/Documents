@@ -50,11 +50,16 @@ values={[
 <TabItem value="curl">
 
 ```shell
-curl -X POST https://api.vidprotect.ir/v1/storage/bucket/file/generate/link \
-   -H 'api_key: your_api_key' \
-   -H 'secret_key: your_secret_key' \   
-   -H 'Content-Type: application/json' \
-   -d '{ "fileId": "_id", "mobileNumber": "0900000000" }'
+curl -X 'POST' \
+  'https://api.vidprotect.ir/v1/storage/bucket/file/generate/link' \
+  -H 'accept: application/json' \
+  -H 'api_key: your_api_key' \
+  -H 'secret_key: your_secret_key' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "fileId": "_id",
+  "mobileNumber": "0900000000"
+}'
 ```
 
 </TabItem>
