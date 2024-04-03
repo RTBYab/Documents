@@ -25,13 +25,26 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs
-defaultValue="node"
+defaultValue="curl"
 values={[
+{label: 'CURL', value: 'curl'},
 {label: 'Node.js', value: 'node'},
 {label: 'Python', value: 'py'},
 {label: 'GO', value: 'go'},
 {label: 'PHP', value: 'php'}
 ]}>
+
+<TabItem value="curl">
+
+```shell
+curl -X POST https://api.vidprotect.ir/v1/storage/bucket/file/:fileId \
+   -H 'api_key: your_api_key' \
+   -H 'secret_key: your_secret_key' \   
+   -F "title=Example 2" \
+   -F "file=@path/to/file"
+```
+
+</TabItem>
 
 <TabItem value="node">
 

@@ -28,20 +28,32 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs
-defaultValue="node"
+defaultValue="curl"
 values={[
+{label: 'CURL', value: 'curl'},
 {label: 'Node.js', value: 'node'},
 {label: 'Python', value: 'py'},
 {label: 'GO', value: 'go'},
 {label: 'PHP', value: 'php'}
 ]}>
 
+<TabItem value="curl">
+
+```shell
+curl https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucketId \
+   -H 'api_key: your_api_key' \
+   -H 'secret_key: your_secret_key' \   
+   -H 'Content-Type: application/json'
+```
+
+</TabItem>
+
 <TabItem value="node">
 
 ```js
 const superagent = require('superagent');
 
-superagent('https://api.vidprotect.ir/v1/storage/bucket/file/all')
+superagent('https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucketId')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .then(data => data.body)
@@ -55,7 +67,7 @@ superagent('https://api.vidprotect.ir/v1/storage/bucket/file/all')
 ```python
 import requests
 
-url = 'https://api.vidprotect.ir/v1/storage/bucket/file/all'
+url = 'https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucketId'
 headers = {
     'api_key': 'your_api_key',
     'secret_key': 'your_secret_key'
@@ -85,7 +97,7 @@ import (
 )
 
 func main() {
-	url := "https://api.vidprotect.ir/v1/storage/bucket/file/all"
+	url := "https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucketId"
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -121,7 +133,7 @@ func main() {
 ```php
 <?php
 
-$url = 'https://api.vidprotect.ir/v1/storage/bucket/file/all';
+$url = 'https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucketId';
 $api_key = 'your_api_key';
 $secret_key = 'your_secret_key';
 

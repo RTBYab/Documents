@@ -38,13 +38,26 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs
-defaultValue="node"
+defaultValue="curl"
 values={[
+{label: 'CURL', value: 'curl'},
 {label: 'Node.js', value: 'node'},
 {label: 'Python', value: 'py'},
 {label: 'GO', value: 'go'},
 {label: 'PHP', value: 'php'}
 ]}>
+
+<TabItem value="curl">
+
+```shell
+curl -X POST https://api.vidprotect.ir/v1/storage/bucket/file/generate/link \
+   -H 'api_key: your_api_key' \
+   -H 'secret_key: your_secret_key' \   
+   -H 'Content-Type: application/json' \
+   -d '{ "fileId": "_id", "mobileNumber": "0900000000" }'
+```
+
+</TabItem>
 
 <TabItem value="node">
 
@@ -175,7 +188,7 @@ echo $response;
 </Tabs>
 
 
-سپس آدرس دریافتی را با استفاده از iframe در صفجه وبسایت خود بارگذاری کنید.
+سپس آدرس دریافتی را با استفاده از iframe در صفحه وبسایت خود بارگذاری کنید.
 
 ### نمونه iframe
 
