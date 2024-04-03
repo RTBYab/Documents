@@ -34,11 +34,15 @@ values={[
 <TabItem value="curl">
 
 ```shell
-curl -X POST https://api.vidprotect.ir/v1/storage/bucket' \
-   -H 'api_key: your_api_key' \
-   -H 'secret_key: your_secret_key' \   
-   -H 'Content-Type: application/json' \
-   -d '{ "title": "Example 1" }'
+curl -X 'POST' \
+  'https://api.vidprotect.ir/v1/storage/bucket' \
+  -H 'accept: application/json' \
+  -H 'api_key: your_api_key' \
+  -H 'secret_key: your_secret_key' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "title": "Example 1"
+}'
 ```
 
 </TabItem>

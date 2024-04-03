@@ -34,11 +34,16 @@ values={[
 <TabItem value="curl">
 
 ```shell
-curl -X PATCH https://api.vidprotect.ir/v1/storage/bucket \
-   -H 'api_key: your_api_key' \
-   -H 'secret_key: your_secret_key' \   
-   -H 'Content-Type: application/json' \
-   -d '{ "bucketId": "_id", "title": "Example 2" }'
+curl -X 'PATCH' \
+  'https://api.vidprotect.ir/v1/storage/bucket' \
+  -H 'accept: application/json' \
+  -H 'api_key: your_api_key' \
+  -H 'secret_key: your_secret_key' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "bucketId": "_id",
+  "title": "Example 2"
+}'
 ```
 
 </TabItem>
