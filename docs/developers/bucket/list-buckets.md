@@ -22,13 +22,25 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs
-defaultValue="node"
+defaultValue="curl"
 values={[
+{label: 'CURL', value: 'curl'},
 {label: 'Node.js', value: 'node'},
 {label: 'Python', value: 'py'},
 {label: 'GO', value: 'go'},
 {label: 'PHP', value: 'php'}
 ]}>
+
+<TabItem value="curl">
+
+```shell
+curl https://api.vidprotect.ir/v1/storage/bucket/all \
+   -H 'api_key: your_api_key' \
+   -H 'secret_key: your_secret_key' \   
+   -H 'Content-Type: application/json'
+```
+
+</TabItem>
 
 <TabItem value="node">
 

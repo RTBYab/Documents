@@ -1,6 +1,6 @@
 ---
 id: how-to-use
-title: نحوه کار با ویدپروتکت
+title: آشنایی با ویدپروتکت
 tags:
   - Intro
 ---
