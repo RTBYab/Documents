@@ -34,6 +34,8 @@ tags:
 | M   | months  |
 | y   | years   |
 
+### نمونه کد
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
