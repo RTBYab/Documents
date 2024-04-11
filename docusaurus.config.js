@@ -135,7 +135,8 @@ const config = {
             ],
           },
         ],
-        copyright: 'تمام حقوق مادی و معنوی این اثر متعلق به ویدپروتکت می باشد.',
+        copyright:
+          'تمام حقوق مادی و معنوی این اثر متعلق به <a target="_blank" href="https://vidprotect.ir"> ویدپروتکت </a> می باشد.',
       },
       prism: {
         theme: prismThemes.github,

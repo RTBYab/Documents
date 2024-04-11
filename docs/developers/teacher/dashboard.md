@@ -7,7 +7,7 @@ tags:
 
 ## مولفه ها
 
-* [کلید های دسترسی][]
+* [کلید های دسترسی][] (اجباری)
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
