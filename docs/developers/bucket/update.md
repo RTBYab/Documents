@@ -7,9 +7,9 @@ tags:
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
-* آیدی پوشه
-* عنوان
+* [کلید های دسترسی][] (اجباری)
+* آیدی پوشه (اجباری)
+* عنوان (اجباری)
 * توضیحات (اختیاری)
 
 | Key         | Type   | Required | In   | Example                      |
@@ -57,10 +57,10 @@ superagent('PATCH', 'https://api.vidprotect.ir/v1/storage/bucket')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({
-        title: "Example 2",
-        bucketId: "_id"
+      title: 'Example 2',
+      bucketId: '_id'
     })
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -174,3 +174,5 @@ echo $response;
 </TabItem>
 
 </Tabs>
+
+[کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings

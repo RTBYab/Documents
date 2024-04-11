@@ -13,7 +13,7 @@ tags:
 ## ساخت
 
 برای ساخت پوشه ابتدا وارد پنل کاربری،
-[ویدیو های من](https://vidprotect.ir/panel/videos)
+[ویدیو های من][]
 شده و سپس بر روی ساخت پوشه کلیک کنید.
 
 ![Image](./img/1.png)
@@ -42,3 +42,5 @@ tags:
 :::
 
 ![Image](./img/4.png)
+
+[ویدیو های من]: https://vidprotect.ir/panel/videos

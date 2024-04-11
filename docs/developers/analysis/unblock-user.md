@@ -5,14 +5,14 @@ tags:
   - Unblock user
 ---
 
-:::note
+:::warning
 در صورت رفع انسداد، کاربر امکان تماشای دوباره ویدیو ها را دارد.
 :::
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
-* شماره تلفن کاربر
+* [کلید های دسترسی][] (اجباری)
+* شماره تلفن کاربر (اجباری)
 
 | Key          | Type   | Required | In   | Example |
 |--------------|--------|----------|------|---------|
@@ -56,9 +56,9 @@ superagent('POST', 'https://api.vidprotect.ir/v1/analysis/user/video/anomaly')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({
-        mobileNumber: "09000000000"
+      mobileNumber: '09000000000'
     })
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -169,3 +169,5 @@ echo $response;
 </TabItem>
 
 </Tabs>
+
+[کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings

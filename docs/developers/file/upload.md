@@ -3,23 +3,24 @@ id: upload
 title: آپلود ویدیو یا پادکست
 tags:
   - Upload
-  - tus
+  - TUS
 ---
 
-ویدپروتکت به جهت ارتقای کیفیت در هنگام آپلود و همچنین بهبود تجربه کاربری بهتر، از [پروتکل TUS](https://tus.io/)
+ویدپروتکت به جهت ارتقای کیفیت در هنگام آپلود و همچنین بهبود تجربه کاربری بهتر، از پروتکل
+[TUS][]
 برای آپلود ویدیو یا پادکست استفاده میکند.
 
 برای آپلود ویدیو یا پادکست میتوانید از تکه کد های زیر استفاده کنید.
 
-:::note
+:::info
 در صورتی که زبان برنامه نویسی شما در لیست پایین وجود ندارد، میتوانید به آدرس
-[گیت هاب](https://github.com/tus)
+[گیت هاب][]
 این پروتکل رجوع کنید.
 :::
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
+* [کلید های دسترسی][] (اجباری)
 * آیدی پوشه (اختیاری)
 
 | Key       | Type   | Required | In     | Example |
@@ -43,33 +44,29 @@ values={[
 <TabItem value="node">
 
 ```js
-const fs = require('fs');
 const tus = require('tus-js-client');
+const fs = require('fs');
 
 try {
-    const a = new tus.Upload(fs.createReadStream('path/to/file.mp4'), {
-        headers: {
-            api_key: 'your_api_key',
-            bucket_id: '_id',
-            secret_key: 'your_secretKey_key'
-        },
-        onError: (d) => {
-            console.log(d)
-        },
-        onSuccess: () => {
-            console.log('Success', a.url)
-        },
-        metadata: {
-            filename: 'file.mp4',
-            type: 'video/mp4'
-        },
-        retryDelays: [0, 3000, 5000, 10000, 20000],
-        endpoint: 'https://api.vidprotect.ir/v1/storage/bucket/video/upload'
-    });
+  const a = new tus.Upload(fs.createReadStream('path/to/file.mp4'), {
+    headers: {
+      bucket_id: '_id',
+      api_key: 'your_api_key',
+      secret_key: 'your_secretKey_key',
+    },
+    onError: e => console.log(e),
+    onSuccess: () => console.log('Success', a.url),
+    metadata: {
+      filename: 'file.mp4',
+      type: 'video/mp4',
+    },
+    retryDelays: [0, 3000, 5000, 10000, 20000],
+    endpoint: 'https://api.vidprotect.ir/v1/storage/bucket/video/upload',
+  });
 
-    a.start();
+  a.start();
 } catch (e) {
-    console.log(e)
+  console.log(e);
 }
 ```
 
@@ -97,3 +94,9 @@ uploader.upload()
 </TabItem>
 
 </Tabs>
+
+[کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings
+
+[TUS]: https://tus.io
+
+[گیت هاب]: https://github.com/tus

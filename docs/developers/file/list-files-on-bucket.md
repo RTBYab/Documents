@@ -7,8 +7,8 @@ tags:
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
-* آیدی پوشه
+* [کلید های دسترسی][] (اجباری)
+* آیدی پوشه (اجباری)
 * مرتب سازی (اختیاری)
 * سایز (اختیاری)
 * شماره پیج فعلی (اختیاری)
@@ -57,7 +57,7 @@ const superagent = require('superagent');
 superagent('https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucketId')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -160,3 +160,5 @@ curl_close($ch);
 </TabItem>
 
 </Tabs>
+
+[کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings

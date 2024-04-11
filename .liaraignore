@@ -11,3 +11,4 @@ publish
 out
 production
 .docusaurus
+.prettierrc

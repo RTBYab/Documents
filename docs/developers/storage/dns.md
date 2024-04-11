@@ -18,7 +18,7 @@ ip بک اند سایت خود را در داخل وایت لیست تعریف �
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
+* [کلید های دسترسی][] (اجباری)
 
 | Key        | Type     | Required | In   | Example           |
 |------------|----------|----------|------|-------------------|
@@ -62,11 +62,11 @@ superagent('POST', 'https://api.vidprotect.ir/v1/storage/dns/whitelist')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({
-        allowedDNS: [
-            '192.168.1.100'
-        ]
+      allowedDNS: [
+        '192.168.1.100',
+      ],
     })
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -188,7 +188,7 @@ echo $response;
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
+* [کلید های دسترسی][] (اجباری)
 
 <Tabs
 defaultValue="curl"
@@ -220,7 +220,7 @@ const superagent = require('superagent');
 superagent('https://api.vidprotect.ir/v1/storage/dns/whitelist')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -323,3 +323,5 @@ curl_close($ch);
 </TabItem>
 
 </Tabs>
+
+[کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings

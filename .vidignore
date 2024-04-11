@@ -6,6 +6,7 @@ README.md
 .gitignore
 .vidignore
 .liaraignore
+.prettierrc
 publish
 .idea
 .github
