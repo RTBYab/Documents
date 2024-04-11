@@ -9,7 +9,7 @@ tags:
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
+* [کلید های دسترسی][]
 * آیدی فایل
 * شماره تلفن کاربر
 * آدرس IP (اختیاری)
@@ -75,10 +75,10 @@ superagent('POST', 'https://api.vidprotect.ir/v1/storage/bucket/file/generate/li
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({
-        fileId: "_id",
-        mobileNumber: "0900000000"
+      fileId: '_id',
+      mobileNumber: '0900000000'
     })
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -208,3 +208,5 @@ echo $response;
         allow="encrypted-media *;"
 />
 ```
+
+[کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings

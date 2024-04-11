@@ -8,7 +8,7 @@ tags:
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
+* [کلید های دسترسی][]
 * آیدی فایل
 * عنوان
 * توضیحات (اختیاری)
@@ -61,7 +61,7 @@ superagent('POST', `https://api.vidprotect.ir/v1/storage/bucket/file/${fileId}`)
     .set('secret_key', 'your_secret_key')
     .field('title', 'Example 2')
     .attach('file', 'path/to/file')
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -219,3 +219,5 @@ fclose($fileHandle);
 </TabItem>
 
 </Tabs>
+
+[کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings

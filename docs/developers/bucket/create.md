@@ -9,7 +9,7 @@ tags:
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
+* [کلید های دسترسی][]
 * نام پوشه
 * توضیحات (اختیاری)
 
@@ -56,9 +56,9 @@ superagent('POST', 'https://api.vidprotect.ir/v1/storage/bucket')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({
-        title: "Example 1"
+      title: 'Example 1'
     })
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -169,3 +169,5 @@ echo $response;
 </TabItem>
 
 </Tabs>
+
+[کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings

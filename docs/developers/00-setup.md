@@ -5,9 +5,8 @@ tags:
   - Setup
 ---
 
-
 برای پیاده سازی سریع ابتدا کافیست ابتدا وارد پنل
-[VidProtect](https://vidprotect.ir/panel)
+[VidProtect][]
 شوید سپس در قسمت ویدیو های من بر روی دریافت لینک فایل کلیک کرده و شناسه فایل را کپی کنید.
 
 ### قدم اول
@@ -19,7 +18,7 @@ tags:
 ![Image](./img/02.jpg)
 
 بعد از کپی شناسه فایل درخواست خود را میتوانید با استفاده از CURL و یا
-[نمونه کد آماده](../developers/file/generate-link.md#نمونه-کد)
+[API][]
 ارسال کنید.
 
 ```shell
@@ -39,7 +38,13 @@ curl -X 'POST' \
 مقادیر بالا نیازمند تغییر است.
 
 1. بجای api_key و secret_key کلید های احراز هویت خود از
-   این [آدرس](https://vidprotect.ir/panel/settings/security-settings) دریافت کرده و جایگزین کنید.
+   این [آدرس][] دریافت کرده و جایگزین کنید.
 2. شناسه فایل کپی شده را با fileId جایگزین کنید.
 3. شماره موبایل را به شماره موبایل کاربرتان تغییر دهید.
    :::
+
+[VidProtect]: https://vidprotect.ir/panel
+
+[API]: ../developers/file/generate-link.md#نمونه-کد
+
+[آدرس]: https://vidprotect.ir/panel/settings/security-settings

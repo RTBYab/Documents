@@ -12,7 +12,7 @@ tags:
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
+* [کلید های دسترسی][]
 
 | Key                    | Type                                                                                                                 | Required | In   | Desc                                                                                              |
 |------------------------|----------------------------------------------------------------------------------------------------------------------|----------|------|---------------------------------------------------------------------------------------------------|
@@ -82,9 +82,9 @@ superagent('POST', 'https://api.vidprotect.ir/v1/storage/protect/config')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({
-        fontColor: "#ffff00"
+      fontColor: '#ffff00',
     })
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -200,7 +200,7 @@ echo $response;
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
+* [کلید های دسترسی][]
 
 <Tabs
 defaultValue="curl"
@@ -232,7 +232,7 @@ const superagent = require('superagent');
 superagent('https://api.vidprotect.ir/v1/storage/protect/config')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -335,3 +335,5 @@ curl_close($ch);
 </TabItem>
 
 </Tabs>
+
+[کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings

@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -52,7 +52,7 @@ const config = {
   ],
 
   themeConfig:
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
         {
@@ -83,7 +83,7 @@ const config = {
             'VideoProtect',
           ].join(', '),
         },
-        {name: 'descriptions', content: 'سامانه محافظت از دوره های آموزشی'},
+        { name: 'descriptions', content: 'سامانه محافظت از دوره های آموزشی' },
       ],
       navbar: {
         title: 'ویدپروتکت',
@@ -166,7 +166,6 @@ const config = {
         },
       ],
     }),
-
 };
 
 export default config;

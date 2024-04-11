@@ -13,17 +13,17 @@ tags:
 ```html
 
 <script>
-    function receiveMessage(event) {
-        // this check is necessary 
-        // because the `message` handler accepts messages from any URI
-        if (event.origin !== 'https://player.vidprotect.ir/')
-            return;
+  function receiveMessage(event) {
+    // this check is necessary 
+    // because the `message` handler accepts messages from any URI
+    if (event.origin !== 'https://player.vidprotect.ir/')
+      return;
 
-        const messageData = event.data;
-        console.log('Received message ', messageData);
-    }
+    const messageData = event.data;
+    console.log('Received message ', messageData);
+  }
 
-    window.addEventListener('message', receiveMessage);
+  window.addEventListener('message', receiveMessage);
 </script>
 ```
 
@@ -31,9 +31,9 @@ tags:
 
 ```json
 {
-  "videoProgressTime": 26,
-  "videoDuration": 59,
   "videoWatchCompleted": 43,
-  "videoPlaybackSpeed": 1
+  "videoProgressTime": 26,
+  "videoPlaybackSpeed": 1,
+  "videoDuration": 59
 }
 ```

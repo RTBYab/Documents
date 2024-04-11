@@ -13,10 +13,9 @@ const dockerPath = `${isLinux ? '/' : slash}app${isLinux ? '/' : slash}docker`;
  * @param {String} directoryPath
  * @return {void}
  */
-utils.deleteFolderRecursive = function(directoryPath) {
+utils.deleteFolderRecursive = function (directoryPath) {
   if (fs.existsSync(directoryPath)) {
     fs.readdirSync(directoryPath).forEach(file => {
-
       const curPath = path.join(directoryPath, file);
 
       if (fs.lstatSync(curPath).isDirectory()) {
@@ -24,7 +23,6 @@ utils.deleteFolderRecursive = function(directoryPath) {
       } else {
         fs.unlinkSync(curPath);
       }
-
     });
 
     fs.rmdirSync(directoryPath);
@@ -34,9 +32,10 @@ utils.deleteFolderRecursive = function(directoryPath) {
 /**
  * @return {String}
  */
-utils.getEnvType = function() {
-  return (process.argv.find(s => s.startsWith('--type=')) ??
-    '--type=local').split('=').at(-1);
+utils.getEnvType = function () {
+  return (process.argv.find(s => s.startsWith('--type=')) ?? '--type=local')
+    .split('=')
+    .at(-1);
 };
 
 /**
@@ -44,7 +43,7 @@ utils.getEnvType = function() {
  * @param {String} dest
  * @return {void}
  */
-utils.copyRecursiveSync = function(src, dest) {
+utils.copyRecursiveSync = function (src, dest) {
   const dirName = src.split('/');
   const isDockerFolder = dirName.at(-1) === 'docker';
   const isDockerFile = dirName.at(-2) === 'docker';
@@ -53,26 +52,24 @@ utils.copyRecursiveSync = function(src, dest) {
   const isDirectory = exists && stats.isDirectory();
 
   if (isDirectory) {
-    fs.mkdirSync(
-      isDockerFolder
-        ? dest.replace(dockerPath, '')
-        : dest,
-      {recursive: true},
-    );
+    fs.mkdirSync(isDockerFolder ? dest.replace(dockerPath, '') : dest, {
+      recursive: true
+    });
 
-    fs.readdirSync(src).forEach(function(childItemName) {
+    fs.readdirSync(src).forEach(function (childItemName) {
       utils.copyRecursiveSync(
         path.join(src, childItemName),
-        path.join(dest, childItemName),
+        path.join(dest, childItemName)
       );
     });
   } else {
     fs.copyFileSync(
       src,
-      isDockerFolder || isDockerFile ||
-      (utils.getEnvType() === 'dev' && dest.includes('liara.json'))
+      isDockerFolder ||
+        isDockerFile ||
+        (utils.getEnvType() === 'dev' && dest.includes('liara.json'))
         ? dest.replace(dockerPath, '')
-        : dest,
+        : dest
     );
   }
 
@@ -85,11 +82,13 @@ utils.copyRecursiveSync = function(src, dest) {
  * @param {String} fullPath
  * @return {void}
  */
-utils.changeDockerfile = function(fullPath) {
+utils.changeDockerfile = function (fullPath) {
   let data = fs.readFileSync(fullPath).toString();
   data = data.replace('WORKDIR /app', 'WORKDIR /');
   data = data.replace(/EXPOSE(\s+\d+)+/, 'EXPOSE 3000');
-  data = data.replace(/CMD npm run serve -- --port(\s+\d+)+/,
-    'CMD npm run serve -- --port 3000');
+  data = data.replace(
+    /CMD npm run serve -- --port(\s+\d+)+/,
+    'CMD npm run serve -- --port 3000'
+  );
   fs.writeFileSync(fullPath, data);
 };

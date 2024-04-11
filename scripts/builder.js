@@ -17,11 +17,12 @@ function makeSrc() {
 
   const ignoreFilePath = `${rootPath}.vidignore`;
 
-  const ignoreList = fs.readFileSync(ignoreFilePath).
-    toString().
-    split(isLinux ? '\n' : '\r\n');
+  const ignoreList = fs
+    .readFileSync(ignoreFilePath)
+    .toString()
+    .split(isLinux ? '\n' : '\r\n');
 
-  fs.mkdirSync(productionAppPath, {recursive: true});
+  fs.mkdirSync(productionAppPath, { recursive: true });
 
   const files = fs.readdirSync(rootPath);
 

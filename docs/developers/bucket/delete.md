@@ -11,7 +11,7 @@ tags:
 
 ## مولفه ها
 
-* [کلید های دسترسی](https://vidprotect.ir/panel/settings/security-settings)
+* [کلید های دسترسی][]
 * آیدی پوشه
 
 | Key      | Type   | Required | In   | Example |
@@ -56,9 +56,9 @@ superagent('DELETE', 'https://api.vidprotect.ir/v1/storage/bucket')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .send({
-        bucketId: "_id"
+      bucketId: '_id'
     })
-    .then(data => data.body)
+    .then(data => console.log(data.body))
     .catch(console.log);
 ```
 
@@ -169,3 +169,5 @@ echo $response;
 </TabItem>
 
 </Tabs>
+
+[کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings
