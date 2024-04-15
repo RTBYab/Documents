@@ -33,11 +33,16 @@ utils.deleteFolderRecursive = function (directoryPath) {
  * @return {String}
  */
 utils.getEnvType = function () {
-  return (process.argv.find(s => s.startsWith('--type=')) ?? '--type=local')
+  const env = (
+    process.argv.find(_ => _.startsWith('--type=')) ?? '--type=local'
+  )
     .split('=')
-    .at(-1);
-};
+    .at(-1)
+    .split(' ')
+    .at(0);
 
+  return ['dev', 'local', 'production'].includes(env) ? env : '';
+};
 /**
  * @param {String} src
  * @param {String} dest
@@ -53,13 +58,13 @@ utils.copyRecursiveSync = function (src, dest) {
 
   if (isDirectory) {
     fs.mkdirSync(isDockerFolder ? dest.replace(dockerPath, '') : dest, {
-      recursive: true
+      recursive: true,
     });
 
     fs.readdirSync(src).forEach(function (childItemName) {
       utils.copyRecursiveSync(
         path.join(src, childItemName),
-        path.join(dest, childItemName)
+        path.join(dest, childItemName),
       );
     });
   } else {
@@ -69,7 +74,7 @@ utils.copyRecursiveSync = function (src, dest) {
         isDockerFile ||
         (utils.getEnvType() === 'dev' && dest.includes('liara.json'))
         ? dest.replace(dockerPath, '')
-        : dest
+        : dest,
     );
   }
 
@@ -88,7 +93,7 @@ utils.changeDockerfile = function (fullPath) {
   data = data.replace(/EXPOSE(\s+\d+)+/, 'EXPOSE 3000');
   data = data.replace(
     /CMD npm run serve -- --port(\s+\d+)+/,
-    'CMD npm run serve -- --port 3000'
+    'CMD npm run serve -- --port 3000',
   );
   fs.writeFileSync(fullPath, data);
 };
