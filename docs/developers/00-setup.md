@@ -45,6 +45,6 @@ curl -X 'POST' \
 
 [VidProtect]: https://vidprotect.ir/panel
 
-[API]: ../developers/file/generate-link.md#نمونه-کد
+[API]: ./file/generate-link.md#نمونه-کد
 
 [آدرس]: https://vidprotect.ir/panel/settings/security-settings
