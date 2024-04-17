@@ -5,9 +5,9 @@ tags:
   - Setup
 ---
 
-برای پیاده سازی سریع ابتدا کافیست ابتدا وارد پنل
+برای پیاده سازی سریع ابتدا کافیست وارد پنل
 [VidProtect][]
-شوید سپس در قسمت ویدیو های من بر روی دریافت لینک فایل کلیک کرده و شناسه فایل را کپی کنید.
+شوید سپس در قسمت ویدیو های من بر روی **`دریافت لینک فایل`** کلیک کرده و **`شناسه فایل`** را کپی کنید.
 
 ### قدم اول
 
@@ -45,6 +45,6 @@ curl -X 'POST' \
 
 [VidProtect]: https://vidprotect.ir/panel
 
-[API]: ../developers/file/generate-link.md#نمونه-کد
+[API]: ./file/generate-link.md#نمونه-کد
 
 [آدرس]: https://vidprotect.ir/panel/settings/security-settings
