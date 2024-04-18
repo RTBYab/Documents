@@ -200,12 +200,11 @@ echo $response;
 ### نمونه iframe
 
 ```html
-
 <iframe
-        src="generate_link_url"
-        style="height:360px;width:640px;border:none;"
-        allowFullScreen="true"
-        allow="encrypted-media *;"
+   src="generate_link_url"
+   style="height:360px;width:640px;border:none;"
+   allowFullScreen="true"
+   allow="encrypted-media *;"
 />
 ```
 
