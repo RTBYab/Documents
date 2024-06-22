@@ -13,6 +13,7 @@ tags:
 * آیدی فایل (اجباری)
 * شماره تلفن کاربر (اجباری)
 * آدرس IP (اختیاری)
+* تنظیم Beep (اختیاری)
 * تاریخ انقضای لینک (اختیاری)
 
 | Key          | Type                                             | Required | In   | Example       |
@@ -20,6 +21,7 @@ tags:
 | fileId       | string                                           | true     | body | -             |
 | mobileNumber | string                                           | true     | body | 09000000000   |
 | ip           | string                                           | false    | body | 192.168.1.100 |
+| enableBeep   | boolean                                          | false    | body | false         |
 | expireTime   | enum ['2h', '4h', '6h', '12h', '1d', '2d', '1M'] | false    | body | 2h            |
 
 #### Expire time
