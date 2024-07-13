@@ -115,6 +115,10 @@ const config = {
                 label: 'Swagger API',
                 to: 'https://api.vidprotect.ir/docs',
               },
+              {
+                label: 'Redocly API',
+                to: 'https://api.vidprotect.ir/redoc',
+              },
             ],
           },
           {
