@@ -22,21 +22,23 @@ tags:
 * استفاده در حالت آفلاین (اختیاری)
 * جلوگیری از اسکرین ریکورد (اختیاری)
 * تاریخ انقضای لینک (اختیاری)
+* ارسال پیامک هشدار (اختیاری)
 
-| Key                    | Type                                             | Required | In   | Example       |
-|------------------------|--------------------------------------------------|----------|------|---------------|
-| fileId                 | string                                           | true     | body | -             |
-| mobileNumber           | string                                           | true     | body | 09000000000   |
-| accessWithMultiIp      | boolean                                          | false    | body | false         |
-| ip                     | string                                           | false    | body | 192.168.1.100 |
-| faultTolerance         | number                                           | false    | body | 6             |
-| enableBeep             | boolean                                          | false    | body | false         |
-| beepInterval           | number                                           | false    | body | 15            |
-| beepVolume             | float                                            | false    | body | 0.2           |
-| securityProtection     | boolean                                          | false    | body | false         |
-| offlineMode            | boolean                                          | false    | body | false         |
-| needInstallApplication | boolean                                          | false    | body | false         |
-| expireTime             | enum ['2h', '4h', '6h', '12h', '1d', '2d', '1M'] | false    | body | 2h            |
+| Key                    | Type    | Required | In   | Example       |
+|------------------------|---------|----------|------|---------------|
+| fileId                 | string  | true     | body | -             |
+| mobileNumber           | string  | true     | body | 09000000000   |
+| accessWithMultiIp      | boolean | false    | body | false         |
+| ip                     | string  | false    | body | 192.168.1.100 |
+| faultTolerance         | number  | false    | body | 6             |
+| enableBeep             | boolean | false    | body | false         |
+| beepInterval           | number  | false    | body | 15            |
+| beepVolume             | float   | false    | body | 0.2           |
+| securityProtection     | boolean | false    | body | false         |
+| offlineMode            | boolean | false    | body | false         |
+| needInstallApplication | boolean | false    | body | false         |
+| expireTime             | string  | false    | body | 2h            |
+| sendProtectionAlert    | boolean | false    | body | false         |
 
 #### Expire time
 
