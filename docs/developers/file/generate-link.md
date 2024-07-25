@@ -15,6 +15,7 @@ tags:
 * فعال سازی تک IP (اختیاری)
 * تنظیم آدرس IP (اختیاری)
 * تحمل خطا (اختیاری)
+* جلوگیری از زوم صفجه (اختیاری)
 * فعال سازی واترمارک صوتی (اختیاری)
 * بازه تکرار واترمارک صوتی (ثانیه) (اختیاری)
 * حجم صدا واترمارک صوتی (اختیاری)
@@ -31,6 +32,7 @@ tags:
 | accessWithMultiIp      | boolean | false    | body | false         |
 | ip                     | string  | false    | body | 192.168.1.100 |
 | faultTolerance         | number  | false    | body | 6             |
+| preventZoom            | boolean | false    | body | false         |
 | enableBeep             | boolean | false    | body | false         |
 | beepInterval           | number  | false    | body | 15            |
 | beepVolume             | float   | false    | body | 0.2           |
