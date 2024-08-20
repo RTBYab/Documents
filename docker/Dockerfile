@@ -6,7 +6,7 @@ COPY /app/package.json ./
 
 RUN npm i --omit=dev
 
-ADD /app ./
+COPY /app ./
 
 RUN npm run build
 
