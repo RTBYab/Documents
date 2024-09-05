@@ -16,7 +16,7 @@
     --ifm-code-font-size: 105%;
     --ifm-font-size-base: 90%;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-    --ifm-font-family-base: 'IranSans-Bold';
+    --ifm-font-family-base: 'IranSans-Light';
     --ifm-heading-font-family: 'IranSans-Bold';
     --ifm-font-family-monospace: 'IranSans-Bold';
 }
@@ -31,12 +31,17 @@
     --ifm-color-primary-lighter: #64a407;
     --ifm-color-primary-lightest: #98ee1e;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-    --ifm-font-family-base: 'IranSans-Bold';
+    --ifm-font-family-base: 'IranSans-Light';
     --ifm-heading-font-family: 'IranSans-Bold';
     --ifm-font-family-monospace: 'IranSans-Bold';
 }
 
 @font-face {
+    font-family: 'IranSans-Light';
+    src: url("../../static/font/IRANSansX-Light.woff") format('woff');
+}
+
+@font-face {
     font-family: 'IranSans-Bold';
-    src: url("../../static/font/iran_sans_bold.woff") format('woff');
+    src: url("../../static/font/IRANSansX-Black.woff") format('woff');
 }
