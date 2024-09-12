@@ -9,6 +9,6 @@ tags:
 رنگ دلخواه خود را انتخاب
 و بر روی دکمه ذخیره کلیک کنید تا رنگ مورد نظر شما اعمال شود.
 
-![Image](./img/07.jpg)
+![Image](./img/07.png) 
 
 [VidProtect]: https://vidprotect.ir
