@@ -6,7 +6,7 @@ on:
     types: [ closed ]
 
 jobs:
-  build:
+  deploy:
     if: ${{ github.event.pull_request.merged }}
     runs-on: self-hosted
 
