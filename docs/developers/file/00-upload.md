@@ -1,6 +1,6 @@
 ---
 id: upload
-title: آپلود ویدیو یا پادکست
+title: آپلود فایل
 tags:
   - Upload
   - TUS

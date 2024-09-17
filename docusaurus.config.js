@@ -97,12 +97,21 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'مستندات',
+            title: 'مستندات محصول',
             items: [
               {
                 label: 'معرفی',
                 to: '/docs/category/معرفی',
               },
+              {
+                label: 'راهنمای پنل',
+                to: '/docs/category/راهنمای-پنل',
+              },
+            ],
+          },
+          {
+            title: 'مستندات فنی',
+            items: [
               {
                 label: 'پلاگین وردپرس',
                 to: '/docs/category/پلاگین-وردپرس',
@@ -135,6 +144,10 @@ const config = {
               {
                 label: 'اینستاگرام',
                 href: 'https://instagram.com/vidprotect',
+              },
+              {
+                label: 'لینکدین',
+                href: 'https://linkedin.com/company/vidprotect',
               },
             ],
           },

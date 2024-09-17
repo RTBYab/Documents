@@ -1,6 +1,6 @@
 ---
 id: delete
-title: حذف ویدیو یا پادکست
+title: حذف فایل
 tags:
   - Delete
 ---
