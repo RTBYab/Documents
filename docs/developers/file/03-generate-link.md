@@ -1,6 +1,6 @@
 ---
 id: generate-link
-title: ساخت لینک ویدیو یا پادکست
+title: ساخت لینک پخش
 tags:
   - Generate link
 ---
@@ -12,7 +12,7 @@ tags:
 * [کلید های دسترسی][] (اجباری)
 * آیدی فایل (اجباری)
 * شماره تلفن کاربر (اجباری)
-* فعال سازی تک IP (اختیاری)
+* جلوگیری از به اشتراک گذاری لینک بر اساس IP (اختیاری)
 * تنظیم آدرس IP (اختیاری)
 * تحمل خطا (اختیاری)
 * جلوگیری از زوم صفحه (اختیاری)
@@ -24,6 +24,7 @@ tags:
 * جلوگیری از اسکرین ریکورد (اختیاری)
 * تاریخ انقضای لینک (اختیاری)
 * ارسال پیامک هشدار (اختیاری)
+* جلوگیری از به اشتراک گذاری لینک بر اساس نشست کاربر (اختیاری)
 
 | Key                    | Type    | Required | In   | Example       |
 |------------------------|---------|----------|------|---------------|
@@ -41,6 +42,7 @@ tags:
 | needInstallApplication | boolean | false    | body | false         |
 | expireTime             | string  | false    | body | 2h            |
 | sendProtectionAlert    | boolean | false    | body | false         |
+| enableActiveSession    | boolean | false    | body | true          |
 
 #### Expire time
 

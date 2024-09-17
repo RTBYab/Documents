@@ -6,7 +6,6 @@ const isLinux = process.platform === 'linux';
 const rootPath = `${__dirname}/../`;
 const productionPath = `${rootPath}production/`;
 const productionAppPath = `${productionPath}app`;
-const inDevelopment = utils.getEnvType() === 'dev';
 
 makeSrc();
 
@@ -29,11 +28,6 @@ function makeSrc() {
   for (const file of files) {
     const fullPath = path.join(rootPath, file);
     const targetPath = path.join(productionAppPath, file);
-
-    if (['liara.json'].includes(file) && inDevelopment) {
-      const newPath = targetPath.replace('/app', '');
-      fs.copyFileSync(fullPath, newPath);
-    }
 
     if (ignoreList.includes(file)) {
       continue;

@@ -19,7 +19,7 @@ tags:
 | speed                  | number                                                                                                               | false    | body | The speed of moving text on the screen                                                            |
 | fontColor              | enum ['#ffff00', '#dda0dd',  '#800000', '#4b0082', '#ffa500', '#27ae60', '#16a085', '#af7ac5', '#e74c3c', '#66a310'] | false    | body | Text font color                                                                                   |
 | fontSize               | number                                                                                                               | false    | body | Text font size                                                                                    |
-| opacity                | number                                                                                                               | false    | body | The transparency of the text in the player, between 0 to 1 in float                               |
+| opacity                | float                                                                                                                | false    | body | The transparency of the text in the player, between 0 to 1 in float                               |
 | sendProtectionAlert    | boolean                                                                                                              | false    | body | Send warning SMS to high-risk users                                                               |
 | faultTolerance         | number                                                                                                               | false    | body | 6                                                                                                 |
 | preventZoom            | boolean                                                                                                              | false    | body | false                                                                                             |
@@ -28,10 +28,11 @@ tags:
 | displayTextOnScreen    | boolean                                                                                                              | false    | body | Prevent to show text on screen                                                                    |
 | needInstallApplication | boolean                                                                                                              | false    | body | Prevent screen capture with third party application(trial version, do not use in your production) |
 | enableBeep             | boolean                                                                                                              | false    | body | Add additional security layer for protect sound                                                   |
-| beepVolume             | number                                                                                                               | false    | body | Beep volume, between 0 to 1 in float                                                              |
+| beepVolume             | float                                                                                                                | false    | body | Beep volume, between 0 to 1 in float                                                              |
 | beepInterval           | number                                                                                                               | false    | body | The duration of the delay in the execution of the beep                                            |
 | player                 | Player                                                                                                               | false    | body | Player other setting                                                                              |
 | link                   | Link                                                                                                                 | false    | body | Link protection                                                                                   |
+| enableActiveSession    | boolean                                                                                                              | false    | body | Prevent to sharing links based current active session                                             |
 
 ### Player
 
@@ -43,10 +44,10 @@ tags:
 
 ### Link
 
-| Key               | Type    | Required | In   | Desc                            |
-|-------------------|---------|----------|------|---------------------------------|
-| accessWithMultiIp | boolean | false    | body | Prevent to sharing video links  |
-| expireTime        | string  | false    | body | Setting the expiration of links |
+| Key               | Type    | Required | In   | Desc                                     |
+|-------------------|---------|----------|------|------------------------------------------|
+| accessWithMultiIp | boolean | false    | body | Prevent to sharing links based client ip |
+| expireTime        | string  | false    | body | Setting the expiration of links          |
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

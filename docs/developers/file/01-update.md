@@ -1,6 +1,6 @@
 ---
 id: update
-title: ویرایش ویدیو یا پادکست
+title: ویرایش فایل
 tags:
   - Update
   - File

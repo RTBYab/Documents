@@ -1,6 +1,6 @@
 ---
 id: get-file
-title: دریافت اطلاعات ویدیو یا پادکست
+title: دریافت اطلاعات فایل
 tags:
   - Get
   - File

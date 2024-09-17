@@ -51,7 +51,7 @@ const rl = readline.createInterface({
 });
 
 rl.question(
-  '\n\nBuild project for: \n\n  1. liara \n  2. custom server \n\nChoose: default [1]:',
+  '\n\nBuild project for: \n\n  1. production \n\nChoose: default [1]:',
   async envType => {
     if (fs.existsSync(publishPathDir + '/vidprotect.zip')) {
       fs.rmSync(publishPathDir + '/vidprotect', {
@@ -61,7 +61,7 @@ rl.question(
       fs.unlinkSync(`${publishPathDir}/vidprotect.zip`);
     }
 
-    envType = envType !== '2' ? 'dev' : 'production';
+    envType = 'production';
 
     zipFiles(`${publishPathDir}/vidprotect.zip`, envType, async () => {
       fs.rmSync(productionRootFolderPath, { force: true, recursive: true });
