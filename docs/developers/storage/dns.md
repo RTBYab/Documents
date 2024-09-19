@@ -327,4 +327,4 @@ curl_close($ch);
 </Tabs>
 
 [کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings
-[ساخت لینک]: ../file/generate-link.md
+[ساخت لینک]: ../file/03-generate-link.md
