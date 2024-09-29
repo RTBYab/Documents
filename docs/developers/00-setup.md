@@ -44,7 +44,29 @@ curl -X 'POST' \
    :::
 
 :::info
-همچنین شما می توانید امکانات مختلف ویدپروتکت به ازای هر لینک تغییر دهید برای اطلاع بیشتر به این [آدرس](./file/03-generate-link.md) مراجعه کنید.
+همچنین شما می توانید امکانات مختلف ویدپروتکت به ازای هر لینک تغییر دهید برای اطلاع بیشتر به
+این [آدرس](./file/03-generate-link.md) مراجعه کنید.
+:::
+
+## پخش در اپلیکیشن ها
+
+در صورتی که از خدمات ما در سمت اپلیکیشن می خواهید استفاده کنید، تنها کافیست یک API برای ساخت لینک پخش، پیاده سازی کرده و
+سپس لینک دریافتی را در یک محیط شبه وب در اپلیکیشن خود نمایش دهید
+
+اگر اپلیکیشن شما
+
+اندروید: [WebView][]
+
+آیفون (iOS):  [WKWebView][]
+
+دکستاپ: [WebView2][]
+
+فلاتر: [WebViewController][]
+
+میتوانید استفاده کنید
+
+:::warning
+از ذخیره و یا استفاده API KEY, SECRET KEY در سمت کلاینت جدا خودداری فرمایید
 :::
 
 [VidProtect]: https://vidprotect.ir/panel
@@ -52,3 +74,11 @@ curl -X 'POST' \
 [API]: ./file/03-generate-link.md#نمونه-کد
 
 [آدرس]: https://vidprotect.ir/panel/settings/security-settings
+
+[WebView]: https://developer.android.com/develop/ui/views/layout/webapps/webview
+
+[WKWebView]: https://developer.apple.com/documentation/webkit/wkwebview
+
+[WebView2]: https://learn.microsoft.com/en-us/microsoft-edge/webview2/get-started/winforms
+
+[WebViewController]: https://codelabs.developers.google.com/codelabs/flutter-webview#0
