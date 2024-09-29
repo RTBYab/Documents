@@ -27,4 +27,4 @@ tags:
 
 ![Image](./img/6.png)
 
-[آدرس]: ./bucket#ساخت-پوشه
+[آدرس]: ./bucket#ساخت
