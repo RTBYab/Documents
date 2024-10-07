@@ -25,6 +25,7 @@ tags:
 * تاریخ انقضای لینک (اختیاری)
 * ارسال پیامک هشدار (اختیاری)
 * جلوگیری از به اشتراک گذاری لینک بر اساس نشست کاربر (اختیاری)
+* نمایش واترمارک سفارشی (اختیاری)
 
 | Key                    | Type    | Required | In   | Example       |
 |------------------------|---------|----------|------|---------------|
@@ -43,6 +44,7 @@ tags:
 | expireTime             | string  | false    | body | 2h            |
 | sendProtectionAlert    | boolean | false    | body | false         |
 | enableActiveSession    | boolean | false    | body | true          |
+| extraWatermark         | string  | false    | body | a@gmail.com   |
 
 #### Expire time
 
@@ -59,6 +61,10 @@ tags:
 :::warning
 قابلیت امکان جلوگیری از اسکرین ریکورد در نسخه آزمایشی بوده و نیازمند داشتن اپلیکیشن موبایل یا دکستاپ می باشد.
 در صورتی که شما میخواهید در مرورگر محتوای خود را اجرا کنید این قابلیت را نادیده بگیرید
+:::
+
+:::warning
+در صورت استفاده از قابلیت `extraWatermark` اطمینان حاصل کنید که مقدار ارسالی حاوی Space نباشد
 :::
 
 ### نمونه کد
@@ -158,7 +164,7 @@ func main() {
 
 	data := map[string]string{
 		"fileId": "_id",
-        "mobileNumber" => "0900000000",
+        "mobileNumber": "0900000000",
 	}
 	jsonData, _ := json.Marshal(data)
 
@@ -227,12 +233,13 @@ echo $response;
 ### نمونه iframe
 
 ```html
+
 <iframe
    src="generate_link_url"
    style="height:360px;width:640px;border:none;"
    allowFullScreen="true"
    allow="encrypted-media *;"
-/>
+></iframe>
 ```
 
 [کلید های دسترسی]: https://vidprotect.ir/panel/settings/security-settings
