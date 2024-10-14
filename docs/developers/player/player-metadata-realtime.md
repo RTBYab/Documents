@@ -11,13 +11,13 @@ tags:
 ### نحوه استفاده
 
 ```html
-
 <script>
   function receiveMessage(event) {
     // this check is necessary 
     // because the `message` handler accepts messages from any URI
-    if (event.origin !== 'https://player.vidprotect.ir/')
+    if (!event.origin.includes('.vidprotect.ir')) {
       return;
+    }
 
     const messageData = event.data;
     console.log('Received message ', messageData);
