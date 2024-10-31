@@ -44,6 +44,7 @@ tags:
 | expireTime             | string  | false    | body | 2h            |
 | sendProtectionAlert    | boolean | false    | body | false         |
 | enableActiveSession    | boolean | false    | body | true          |
+| enablePlaylist         | boolean | false    | body | true          |
 | extraWatermark         | string  | false    | body | a@gmail.com   |
 
 #### Expire time
