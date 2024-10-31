@@ -1,5 +1,5 @@
 ---
-id: get-bucket
+id: get-playlist
 title: دریافت اطلاعات پلی لیست
 tags:
   - Get
