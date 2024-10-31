@@ -1,5 +1,5 @@
 ---
-id: list-buckets
+id: list-playlists
 title: دریافت لیست پلی لیست ها
 tags:
   - Get
