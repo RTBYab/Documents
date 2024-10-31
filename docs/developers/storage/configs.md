@@ -33,6 +33,7 @@ tags:
 | player                 | Player                                                                                                               | false    | body | Player other setting                                                                              |
 | link                   | Link                                                                                                                 | false    | body | Link protection                                                                                   |
 | enableActiveSession    | boolean                                                                                                              | false    | body | Prevent to sharing links based current active session                                             |
+| enablePlaylist         | boolean                                                                                                              | false    | body | Enable use playlist if exist                                                                      |
 
 ### Player
 
@@ -83,14 +84,14 @@ curl -X 'POST' \
 ```js
 const superagent = require('superagent');
 
-superagent('POST', 'https://api.vidprotect.ir/v1/storage/protect/config')
-    .set('api_key', 'your_api_key')
-    .set('secret_key', 'your_secret_key')
-    .send({
-      fontColor: '#ffff00',
-    })
-    .then(data => console.log(data.body))
-    .catch(console.log);
+superagent('POST', 'https://api.vidprotect.ir/v1/storage/protect/config').
+  set('api_key', 'your_api_key').
+  set('secret_key', 'your_secret_key').
+  send({
+    fontColor: '#ffff00',
+  }).
+  then(data => console.log(data.body)).
+  catch(console.log);
 ```
 
 </TabItem>
@@ -139,7 +140,7 @@ func main() {
 	secretKey := "your_secret_key"
 
 	data := map[string]string{
-        fontColor: "#ffff00",
+		fontColor: "#ffff00",
 	}
 	jsonData, _ := json.Marshal(data)
 
@@ -234,11 +235,11 @@ curl -X 'GET' \
 ```js
 const superagent = require('superagent');
 
-superagent('https://api.vidprotect.ir/v1/storage/protect/config')
-    .set('api_key', 'your_api_key')
-    .set('secret_key', 'your_secret_key')
-    .then(data => console.log(data.body))
-    .catch(console.log);
+superagent('https://api.vidprotect.ir/v1/storage/protect/config').
+  set('api_key', 'your_api_key').
+  set('secret_key', 'your_secret_key').
+  then(data => console.log(data.body)).
+  catch(console.log);
 ```
 
 </TabItem>
