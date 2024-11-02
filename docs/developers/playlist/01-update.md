@@ -12,11 +12,18 @@ tags:
 * عنوان (اجباری)
 * لیست فایل ها (اجباری)
 
-| Key        | Type     | Required | In   | Example                                              |
-|------------|----------|----------|------|------------------------------------------------------|
-| playlistId | string   | true     | body | -                                                    |
-| title      | string   | false    | body | Example 2                                            |
-| files      | string[] | false    | body | [671018d0403eba579a6f90e2, 64b2ea750dcf2a9227e55507] |
+| Key        | Type       | Required | In   | Example                |
+|------------|------------|----------|------|------------------------|
+| playlistId | string     | true     | body | -                      |
+| title      | string     | false    | body | Example 2              |
+| files      | Playlist[] | false    | body | [PlayList, PlayList]   |
+
+## Playlist
+
+| Key   | Type   | Required | In   | Example                  |
+|-------|--------|----------|------|--------------------------|
+| _id   | string | true     | body | 671018d0403eba579a6f90e2 |
+| title | string | false    | body | Example 2                |
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -53,15 +60,15 @@ curl -X 'PUT' \
 ```js
 const superagent = require('superagent');
 
-superagent('PUT', 'https://api.vidprotect.ir/v1/playlist').
-  set('api_key', 'your_api_key').
-  set('secret_key', 'your_secret_key').
-  send({
+superagent('PUT', 'https://api.vidprotect.ir/v1/playlist')
+  .set('api_key', 'your_api_key')
+  .set('secret_key', 'your_secret_key')
+  .send({
     title: 'Example 2',
     playlistId: '_id'
-  }).
-  then(data => console.log(data.body)).
-  catch(console.log);
+  })
+  .then(data => console.log(data.body))
+  .catch(console.log);
 ```
 
 </TabItem>
