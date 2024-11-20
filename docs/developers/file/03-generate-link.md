@@ -26,6 +26,7 @@ tags:
 * ارسال پیامک هشدار (اختیاری)
 * جلوگیری از به اشتراک گذاری لینک بر اساس نشست کاربر (اختیاری)
 * نمایش واترمارک سفارشی (اختیاری)
+* ثابت ماندن واترمارک (اختیاری)
 
 | Key                    | Type    | Required | In   | Example       |
 |------------------------|---------|----------|------|---------------|
@@ -46,6 +47,7 @@ tags:
 | enableActiveSession    | boolean | false    | body | true          |
 | enablePlaylist         | boolean | false    | body | true          |
 | extraWatermark         | string  | false    | body | a@gmail.com   |
+| fixWatermark           | boolean | false    | body | false         |
 
 #### Expire time
 
