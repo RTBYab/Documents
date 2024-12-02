@@ -139,11 +139,11 @@ const config = {
               },
               {
                 label: 'تلگرام',
-                href: 'https://t.me/S_Nazarian',
+                href: 'https://t.me/vidprotect_ir',
               },
               {
                 label: 'اینستاگرام',
-                href: 'https://instagram.com/vidprotect',
+                href: 'https://instagram.com/vidprotect.ir',
               },
               {
                 label: 'لینکدین',
