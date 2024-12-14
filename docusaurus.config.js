@@ -52,7 +52,7 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
         {
@@ -81,6 +81,7 @@ const config = {
             'Vid Protect',
             'VidProtect',
             'VideoProtect',
+            'امن ترین سرویس میزبانی و استریم ویدیو در ایران',
           ].join(', '),
         },
         { name: 'descriptions', content: 'سامانه محافظت از دوره های آموزشی' },
@@ -133,10 +134,6 @@ const config = {
           {
             title: 'راه ارتباطی',
             items: [
-              {
-                label: 'واتساپ',
-                href: 'https://api.whatsapp.com/send?phone=00989126836772&text=hi',
-              },
               {
                 label: 'تلگرام',
                 href: 'https://t.me/vidprotect_ir',
