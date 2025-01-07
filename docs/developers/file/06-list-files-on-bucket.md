@@ -8,7 +8,7 @@ tags:
 ## مولفه ها
 
 * [کلید های دسترسی][] (اجباری)
-* آیدی پوشه (اجباری)
+* آیدی پوشه (اختیاری)
 * مرتب سازی (اختیاری)
 * سایز (اختیاری)
 * شماره پیج فعلی (اختیاری)
@@ -17,7 +17,7 @@ tags:
 
 | Key         | Type                               | Required | In    | Example  |
 |-------------|------------------------------------|----------|-------|----------|
-| bucketId    | string                             | true     | query | -        |
+| bucketId    | string                             | false    | query | -        |
 | sortBy      | string                             | false    | query | _id:desc |
 | limit       | number                             | false    | query | 8        |
 | currentPage | number                             | false    | query | 1        |
@@ -41,7 +41,7 @@ values={[
 
 ```shell
 curl -X 'GET' \
-  'https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=_id' \
+  'https://api.vidprotect.ir/v1/storage/bucket/file/all' \
   -H 'accept: application/json' \
   -H 'api_key: your_api_key' \
   -H 'secret_key: your_secret_key'
@@ -54,7 +54,7 @@ curl -X 'GET' \
 ```js
 const superagent = require('superagent');
 
-superagent('https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucketId')
+superagent('https://api.vidprotect.ir/v1/storage/bucket/file/all')
     .set('api_key', 'your_api_key')
     .set('secret_key', 'your_secret_key')
     .then(data => console.log(data.body))
@@ -68,7 +68,7 @@ superagent('https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucket
 ```python
 import requests
 
-url = 'https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucketId'
+url = 'https://api.vidprotect.ir/v1/storage/bucket/file/all'
 headers = {
     'api_key': 'your_api_key',
     'secret_key': 'your_secret_key'
@@ -98,7 +98,7 @@ import (
 )
 
 func main() {
-	url := "https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucketId"
+	url := "https://api.vidprotect.ir/v1/storage/bucket/file/all"
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -134,7 +134,7 @@ func main() {
 ```php
 <?php
 
-$url = 'https://api.vidprotect.ir/v1/storage/bucket/file/all?bucketId=bucketId';
+$url = 'https://api.vidprotect.ir/v1/storage/bucket/file/all';
 $api_key = 'your_api_key';
 $secret_key = 'your_secret_key';
 
