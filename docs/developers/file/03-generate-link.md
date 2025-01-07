@@ -25,6 +25,7 @@ tags:
 * تاریخ انقضای لینک (اختیاری)
 * ارسال پیامک هشدار (اختیاری)
 * جلوگیری از به اشتراک گذاری لینک بر اساس نشست کاربر (اختیاری)
+* فعال سازی پلی لیست (اختیاری)
 * نمایش واترمارک سفارشی (اختیاری)
 * ثابت ماندن واترمارک (اختیاری)
 
@@ -241,7 +242,7 @@ echo $response;
    src="generate_link_url"
    style="height:360px;width:640px;border:none;"
    allowFullScreen="true"
-   allow="encrypted-media *;"
+   allow="fullscreen; encrypted-media *;"
 ></iframe>
 ```
 
