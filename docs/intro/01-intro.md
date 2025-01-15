@@ -23,4 +23,4 @@ tags:
 [API]: ../developers/00-setup.md
 [پلاگین وردپرس]: ../wordpress/01-video.md
 [حساب کاربری]: https://vidprotect.ir/auth/register
-[آدرس]: ./panel-guideline/storage/file.md
+[آدرس]: ../panel-guideline/storage/file.md
