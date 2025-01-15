@@ -5,6 +5,16 @@ tags:
   - WordPress
 ---
 
+
+در این ویدیو، نصب و فعال‌سازی پلاگین‌های وردپرسی را به صورت کامل و قدم‌به‌قدم آموزش می‌دهیم. با این آموزش، شما می‌توانید
+به راحتی پلاگین‌های مورد نیاز خود را نصب کنید و از امکانات بی‌نظیر آنها بهره ببرید.
+
+## نکات برجسته این آموزش:
+
+- **نصب پلاگین به صورت دستی**
+- **فعال‌سازی و تنظیمات اولیه**
+- **آشنایی با قابلیت های پلاگین**
+
 <center>
-<iframe width="100%" height="400" src="https://player.vidprotect.ir?id=0b873d31-50b1-493d-b732-65549376ce89" allowFullScreen="true" allow="encrypted-media *;"></iframe>
+<iframe width="100%" height="400" src="https://player.vidprotect.ir?id=0b873d31-50b1-493d-b732-65549376ce89" allow="encrypted-media *; fullscreen"></iframe>
 </center>
