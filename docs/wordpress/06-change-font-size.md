@@ -21,3 +21,4 @@ tags:
 
 ```text
 .vidprotect-link
+```
