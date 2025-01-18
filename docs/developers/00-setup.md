@@ -64,7 +64,7 @@ curl -X 'POST' \
 فلاتر: [WebViewController][]
 
 :::warning
-از ذخیره و یا استفاده API KEY, SECRET KEY در سمت کلاینت جدا خودداری فرمایید
+از ذخیره و یا استفاده API KEY, SECRET KEY در سمت کلاینت جدا خودداری فرمایید.
 :::
 
 [VidProtect]: https://vidprotect.ir/panel
