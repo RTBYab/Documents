@@ -1,6 +1,6 @@
 ---
 id: encryption
-title: نحوه رمزنگاری
+title: نحوه رمزنگاری در پلتفرم ویدیویی VidProtect
 tags:
   - Intro
 ---

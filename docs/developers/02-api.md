@@ -5,7 +5,7 @@ tags:
   - API
 ---
 
-برای آشنایی با API های ویدپروتکت می توانید به آدرس های زیر مراجعه کنید.
+برای آشنایی با API های سرویس میزبانی ویدیو، ویدپروتکت می توانید به آدرس های زیر مراجعه کنید.
 
 * [Swagger](https://api.vidprotect.ir/docs)
 * [Redocly](https://api.vidprotect.ir/redoc)
