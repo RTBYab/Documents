@@ -52,12 +52,22 @@ const config = {
   ],
 
   themeConfig:
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
         {
           name: 'keywords',
           content: [
+            'هاست ویدیو',
+            'پلتفرم میزبانی ویدیو',
+            'سرویس میزبانی ویدیو',
+            'هاست استریم ویدیو',
+            'سرویس VOD',
+            'بهترین هاست ویدیو',
+            'هاست امن ویدیو',
+            'سرویس امن میزبانی ویدیو',
+            'پلتفرم ویدیویی ',
+            'پلتفرم ویدیو ',
             'مستندات ویدپروتکت',
             'مستندات وید پروتکت',
             'مستندات VidProtect',

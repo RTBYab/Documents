@@ -13,7 +13,7 @@ tags:
 <br/>
 <br/>
 <center>
-![Image](../../static/img/detection.svg)
+![سرویس میزبانی ویدیو ویدپروتکت، محافظ دوره‌های آموزشی شما در برابر سرقت](../../static/img/detection.svg)
 </center>
 
 [پنل کاربری]: https://vidprotect.ir/panel/users-management

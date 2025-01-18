@@ -16,7 +16,7 @@ tags:
 <br/><br/>
 
 <center>
-![Image](../../static/img/privacy.svg)
+![پلتفرم ویدیو ویدپروتکت، محافظ دوره‌های آموزشی شما در برابر سرقت](../../static/img/privacy.svg)
 </center>
 
 [VidProtect]: https://vidprotect.ir

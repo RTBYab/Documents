@@ -16,5 +16,5 @@ tags:
 - **آشنایی با قابلیت های پلاگین**
 
 <center>
-<iframe width="100%" height="400" src="https://player.vidprotect.ir?id=0b873d31-50b1-493d-b732-65549376ce89" allow="encrypted-media *; fullscreen"></iframe>
+<iframe width="100%" name="پلتفرم ویدیو ویدپروتکت، محافظ دوره‌های آموزشی شما در برابر سرقت" height="400" src="https://player.vidprotect.ir?id=0b873d31-50b1-493d-b732-65549376ce89" allow="encrypted-media *; fullscreen"></iframe>
 </center>
