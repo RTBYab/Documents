@@ -9,7 +9,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ویدپروتکت',
-  tagline: 'سامانه یکپارچه محافظت از دوره های آموزشی',
+  tagline: 'امن‌ترین سرویس میزبانی ویدیو، ویدپروتکت',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
