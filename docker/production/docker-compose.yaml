@@ -1,10 +1,10 @@
 services:
 
-  docs:
+  docs-fa:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: docs
+    container_name: docs-fa
     restart: always
     ports:
       - '2087:2087'
