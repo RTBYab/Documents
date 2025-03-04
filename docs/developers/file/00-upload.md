@@ -61,7 +61,7 @@ try {
       type: 'video/mp4',
     },
     retryDelays: [0, 3000, 5000, 10000, 20000],
-    endpoint: 'https://api.vidprotect.ir/v1/storage/bucket/video/upload',
+    endpoint: 'https://tus.product-managers.ir/file',
   });
 
   a.start();
@@ -77,7 +77,7 @@ try {
 ```python
 from tusclient import client
 
-my_client = client.TusClient('https://api.vidprotect.ir/v1/storage/bucket/video/upload',
+my_client = client.TusClient('https://tus.product-managers.ir/file',
                               headers={
                                  api_key: 'your_api_key',
                                  bucket_id: '_id',
