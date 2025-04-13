@@ -59,7 +59,7 @@ curl -X 'POST' \
 
 آیفون (iOS):  [WKWebView][]
 
-دکستاپ: [WebView2][]
+دسکتاپ: [WebView2][]
 
 فلاتر: [WebViewController][]
 
