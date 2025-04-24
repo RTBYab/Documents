@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     if: ${{ github.event.pull_request.merged }}
-    runs-on: self-hosted
+    runs-on: prod
 
     steps:
       - uses: actions/checkout@v4
@@ -21,4 +21,4 @@ jobs:
 
       - name: Deploy project
         run: |
-          cd ./production && sudo docker compose up -d --build docs-fa
+          cd ./production && sudo docker compose up -d --build prod-docs-fa-vid
