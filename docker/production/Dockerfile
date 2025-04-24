@@ -10,6 +10,6 @@ COPY /app ./
 
 RUN npm run build
 
-EXPOSE 2087
+EXPOSE 1604
 
-CMD npm run serve -- --port 2087
+CMD npm run serve -- --port 1604
