@@ -61,22 +61,28 @@ else
 fi
 
 # Get minor/patch updates
-minor_patch_packages=$(echo "$outdated_json" | jq -r 'to_entries[]
+minor_patch_updates=$(echo "$outdated_json" | jq -r 'to_entries[]
   | select((.value.latest | split(".")[0]|tonumber) == (.value.current | split(".")[0]|tonumber))
-  | .key')
+  | "\(.key) \(.value.current) \(.value.latest)"')
 
-# Filter out excluded packages
 PACKAGES_TO_UPDATE=()
-if [ -n "$minor_patch_packages" ]; then
+
+if [ -n "$minor_patch_updates" ]; then
   echo -e "\n${CYAN}📦 Packages with minor/patch updates available:${NC}"
-  for pkg in $minor_patch_packages; do
+  printf "${CYAN}%-30s %-15s %-15s${NC}\n" "Package" "Current" "Latest"
+  printf "%-30s %-15s %-15s\n" "------------------------------" "---------------" "---------------"
+
+  while IFS= read -r line; do
+    pkg=$(echo "$line" | awk '{print $1}')
+    current=$(echo "$line" | awk '{print $2}')
+    latest=$(echo "$line" | awk '{print $3}')
     if printf '%s\n' "${EXCLUDE_PACKAGES[@]}" | grep -Fxq "$pkg"; then
       echo -e "${YELLOW}⏭️  Skipping excluded package: ${pkg}${NC}"
     else
-      echo -e "  - ${pkg}"
+      printf "%-30s %-15s %-15s\n" "$pkg" "$current" "$latest"
       PACKAGES_TO_UPDATE+=("$pkg")
     fi
-  done
+  done <<< "$minor_patch_updates"
 
   if [ "${#PACKAGES_TO_UPDATE[@]}" -eq 0 ]; then
     echo -e "${YELLOW}⚠️  No packages left to update after exclusions.${NC}"
@@ -90,7 +96,12 @@ if [ -n "$minor_patch_packages" ]; then
         if npm install "$pkg"@latest; then
           echo -e "${GREEN}✅ Successfully updated ${pkg}${NC}"
         else
-          echo -e "${RED}❌ Failed to update ${pkg}${NC}"
+          echo -e "${YELLOW}⚠️ Initial update failed, retrying with --force...${NC}"
+          if npm install "$pkg"@latest --force; then
+            echo -e "${GREEN}✅ Successfully updated ${pkg} with --force${NC}"
+          else
+            echo -e "${RED}❌ Failed to update ${pkg} even with --force${NC}"
+          fi
         fi
       done
     else
