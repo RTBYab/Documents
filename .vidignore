@@ -12,3 +12,4 @@ publish
 package-lock.json
 production
 .docusaurus
+.npm-update-exclude
