@@ -87,14 +87,14 @@ curl -X 'POST' \
 ```js
 const superagent = require('superagent');
 
-superagent('POST', 'https://api.vidprotect.ir/v1/storage/protect/config').
-  set('api_key', 'your_api_key').
-  set('secret_key', 'your_secret_key').
-  send({
-    fontColor: '#ffff00',
-  }).
-  then(data => console.log(data.body)).
-  catch(console.log);
+superagent('POST', 'https://api.vidprotect.ir/v1/storage/protect/config')
+        .set('api_key', 'your_api_key')
+        .set('secret_key', 'your_secret_key')
+        .send({
+           fontColor: '#ffff00',
+        })
+        .then(data => console.log(data.body))
+        .catch(console.log);
 ```
 
 </TabItem>
@@ -239,11 +239,11 @@ curl -X 'GET' \
 ```js
 const superagent = require('superagent');
 
-superagent('https://api.vidprotect.ir/v1/storage/protect/config').
-  set('api_key', 'your_api_key').
-  set('secret_key', 'your_secret_key').
-  then(data => console.log(data.body)).
-  catch(console.log);
+superagent('https://api.vidprotect.ir/v1/storage/protect/config')
+  .set('api_key', 'your_api_key')
+  .set('secret_key', 'your_secret_key')
+  .then(data => console.log(data.body))
+  .catch(console.log);
 ```
 
 </TabItem>
