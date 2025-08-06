@@ -33,6 +33,8 @@ tags:
 | player                 | Player                                                                                                               | false    | body | Player other setting                                                                              |
 | link                   | Link                                                                                                                 | false    | body | Link protection                                                                                   |
 | enableActiveSession    | boolean                                                                                                              | false    | body | Prevent to sharing links based current active session                                             |
+| regenerateLink         | boolean                                                                                                              | false    | body | Generate link after expired                                                                       |
+| relatedPlaylist        | boolean                                                                                                              | false    | body | Single downloadable file in playlist                                                              |
 | enablePlaylist         | boolean                                                                                                              | false    | body | Enable use playlist if exist                                                                      |
 
 ### Player
