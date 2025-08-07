@@ -12,7 +12,8 @@ tags:
 
 ## مولفه ها
 
-* [کلید های دسترسی][] (اجباری)
+* [کلید های دسترسی][] (اجباری)  
+  برای دریافت این کلیدها به بخش **تنظیمات امنیتی** در پنل ویدپروتکت مراجعه کنید.
 
 | Key                    | Type                                                                                                                 | Required | In   | Desc                                                                                              |
 |------------------------|----------------------------------------------------------------------------------------------------------------------|----------|------|---------------------------------------------------------------------------------------------------|
@@ -33,6 +34,8 @@ tags:
 | player                 | Player                                                                                                               | false    | body | Player other setting                                                                              |
 | link                   | Link                                                                                                                 | false    | body | Link protection                                                                                   |
 | enableActiveSession    | boolean                                                                                                              | false    | body | Prevent to sharing links based current active session                                             |
+| regenerateLink         | boolean                                                                                                              | false    | body | Generate link after expired                                                                       |
+| relatedPlaylist        | boolean                                                                                                              | false    | body | Single downloadable file in playlist                                                              |
 | enablePlaylist         | boolean                                                                                                              | false    | body | Enable use playlist if exist                                                                      |
 
 ### Player
@@ -84,14 +87,14 @@ curl -X 'POST' \
 ```js
 const superagent = require('superagent');
 
-superagent('POST', 'https://api.vidprotect.ir/v1/storage/protect/config').
-  set('api_key', 'your_api_key').
-  set('secret_key', 'your_secret_key').
-  send({
-    fontColor: '#ffff00',
-  }).
-  then(data => console.log(data.body)).
-  catch(console.log);
+superagent('POST', 'https://api.vidprotect.ir/v1/storage/protect/config')
+        .set('api_key', 'your_api_key')
+        .set('secret_key', 'your_secret_key')
+        .send({
+           fontColor: '#ffff00',
+        })
+        .then(data => console.log(data.body))
+        .catch(console.log);
 ```
 
 </TabItem>
@@ -206,7 +209,8 @@ echo $response;
 
 ## مولفه ها
 
-* [کلید های دسترسی][] (اجباری)
+* [کلید های دسترسی][] (اجباری)  
+  برای دریافت این کلیدها به بخش **تنظیمات امنیتی** در پنل ویدپروتکت مراجعه کنید.
 
 <Tabs
 defaultValue="curl"
@@ -235,11 +239,11 @@ curl -X 'GET' \
 ```js
 const superagent = require('superagent');
 
-superagent('https://api.vidprotect.ir/v1/storage/protect/config').
-  set('api_key', 'your_api_key').
-  set('secret_key', 'your_secret_key').
-  then(data => console.log(data.body)).
-  catch(console.log);
+superagent('https://api.vidprotect.ir/v1/storage/protect/config')
+  .set('api_key', 'your_api_key')
+  .set('secret_key', 'your_secret_key')
+  .then(data => console.log(data.body))
+  .catch(console.log);
 ```
 
 </TabItem>

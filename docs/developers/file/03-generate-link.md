@@ -9,7 +9,8 @@ tags:
 
 ## مولفه ها
 
-* [کلید های دسترسی][] (اجباری)
+* [کلید های دسترسی][] (اجباری)  
+  برای دریافت این کلیدها به بخش **تنظیمات امنیتی** در پنل ویدپروتکت مراجعه کنید.
 * آیدی فایل (اجباری)
 * [شماره تلفن کاربر](#شماره-تلفن-کاربر) (اختیاری)
 * [جلوگیری از به اشتراک گذاری لینک بر اساس IP](#جلوگیری-از-به-اشتراک-گذاری-لینک-بر-اساس-ip) (اختیاری)
@@ -64,26 +65,29 @@ tags:
 در صورت استفاده از این قابلیت اطمینان حاصل کنید که مقدار ارسالی حاوی Space نباشد
 :::
 
-| Key                    | Type    | Required | In   | Example       |
-|------------------------|---------|----------|------|---------------|
-| fileId                 | string  | true     | body | -             |
-| mobileNumber           | string  | false    | body | 09000000000   |
-| accessWithMultiIp      | boolean | false    | body | false         |
-| ip                     | string  | false    | body | 192.168.1.100 |
-| faultTolerance         | number  | false    | body | 6             |
-| preventZoom            | boolean | false    | body | false         |
-| enableBeep             | boolean | false    | body | false         |
-| beepInterval           | number  | false    | body | 15            |
-| beepVolume             | float   | false    | body | 0.2           |
-| securityProtection     | boolean | false    | body | false         |
-| offlineMode            | boolean | false    | body | false         |
-| needInstallApplication | boolean | false    | body | false         |
-| expireTime             | string  | false    | body | 2h            |
-| sendProtectionAlert    | boolean | false    | body | false         |
-| enableActiveSession    | boolean | false    | body | true          |
-| enablePlaylist         | boolean | false    | body | true          |
-| extraWatermark         | string  | false    | body | a@gmail.com   |
-| fixWatermark           | boolean | false    | body | false         |
+| Key                    | Type      | Required | In   | Example       |
+|------------------------|-----------|----------|------|---------------|
+| fileId                 | string    | true     | body | -             |
+| mobileNumber           | string    | false    | body | 09000000000   |
+| accessWithMultiIp      | boolean   | false    | body | false         |
+| ip                     | string    | false    | body | 192.168.1.100 |
+| faultTolerance         | number    | false    | body | 6             |
+| preventZoom            | boolean   | false    | body | false         |
+| enableBeep             | boolean   | false    | body | false         |
+| beepInterval           | number    | false    | body | 15            |
+| beepVolume             | float     | false    | body | 0.2           |
+| securityProtection     | boolean   | false    | body | false         |
+| offlineMode            | boolean   | false    | body | false         |
+| needInstallApplication | boolean   | false    | body | false         |
+| expireTime             | string    | false    | body | 2h            |
+| sendProtectionAlert    | boolean   | false    | body | false         |
+| enableActiveSession    | boolean   | false    | body | true          |
+| enablePlaylist         | boolean   | false    | body | true          |
+| extraWatermark         | string    | false    | body | a@gmail.com   |
+| fixWatermark           | boolean   | false    | body | false         |
+| regenerateLink         | boolean   | false    | body | false         |
+| relatedPlaylist        | boolean   | false    | body | false         |
+
 
 #### Expire time
 
