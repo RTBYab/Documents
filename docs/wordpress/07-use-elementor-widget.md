@@ -1,5 +1,5 @@
 ---
-id: use-elementor-widget-fa
+id: use-elementor-widget
 title: استفاده از ویجت پخش‌کننده VidProtect در المنتور
 tags:
   - WordPress
